@@ -1,0 +1,1855 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: FastCMS\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-17 20:07+0200\n"
+"PO-Revision-Date: 2013-04-03 22:03+0200\n"
+"Last-Translator: Nicholas Valbusa <info@squallstar.it>\n"
+"Language-Team: Fastimus <fastimus@fastimus.ru>\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_trans\n"
+"X-Poedit-Basepath: ../../../../\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-SearchPath-0: controllers/admin\n"
+"X-Poedit-SearchPath-1: libraries\n"
+"X-Poedit-SearchPath-2: models\n"
+"X-Poedit-SearchPath-3: views/admin\n"
+"X-Poedit-SearchPath-4: core\n"
+"X-Poedit-SearchPath-5: helpers\n"
+"X-Poedit-SearchPath-6: errors\n"
+"X-Poedit-SearchPath-7: modules\n"
+"X-Poedit-SearchPath-8: content\n"
+
+#: core/controllers/website.php:45
+msgid "The website is currently under maintenance. Please try later."
+msgstr "Сайт на обслуживании."
+
+#: core/controllers/website.php:84
+msgid ""
+"The default homepage has not been set. Please go to the settings and update "
+"the website homepage."
+msgstr "Домашняя страница не установлена"
+
+#: core/controllers/admin/auth.php:58
+msgid "Username/password wrong."
+msgstr "Неправильное имя пользователя/пароль"
+
+#: core/controllers/admin/contents.php:133
+msgid "The records have been published."
+msgstr "Запись обуликована"
+
+#: core/controllers/admin/contents.php:141
+msgid "The records have been depublished."
+msgstr "Запись снята с публикации"
+
+#: core/controllers/admin/contents.php:148
+msgid "The records have been deleted."
+msgstr "Запись удалена"
+
+#: core/controllers/admin/contents.php:155
+msgid "The records have been rolled back to the production ones."
+msgstr "Сброшено к изначальному состоянию"
+
+#: core/controllers/admin/contents.php:355
+msgid "The content %n has been saved."
+msgstr "Запись %n сохранена"
+
+#: core/controllers/admin/contents.php:365
+msgid "The content %n has been published."
+msgstr "Запись %n опубликована"
+
+#: core/controllers/admin/contents.php:366
+#: core/controllers/admin/contents.php:372
+msgid "View content"
+msgstr "просмотр"
+
+#: core/controllers/admin/contents.php:372
+msgid "The content has been saved."
+msgstr "Сохранено"
+
+#: core/controllers/admin/contents.php:394
+msgid "Something went wrong..."
+msgstr "Ошибка. Смотрим логи"
+
+#: core/controllers/admin/contents.php:409
+msgid "First level"
+msgstr "Родительская"
+
+#: core/controllers/admin/contents.php:509
+msgid "Cannot delete the record %r of type %t"
+msgstr "Удаление %r из %t не удалось."
+
+#: core/controllers/admin/contents.php:509
+#: core/controllers/admin/contents.php:538
+#: core/controllers/admin/schemes.php:77 core/libraries/bancha/content.php:145
+#: core/libraries/bancha/content.php:191
+msgid "Error"
+msgstr "Ошибка"
+
+#: core/controllers/admin/contents.php:531
+msgid "The record %n has been deleted."
+msgstr "Запись %n удалена"
+
+#: core/controllers/admin/contents.php:538
+msgid "The record ID was not set."
+msgstr "Не присвоен ID записи. "
+
+#: core/controllers/admin/contents.php:568
+msgid "Please insert a name for this type."
+msgstr "Необходим заголовок"
+
+#: core/controllers/admin/contents.php:594
+msgid "The scheme of the content type %n has been updated"
+msgstr "Структура %n обновлена"
+
+#: core/controllers/admin/contents.php:600
+msgid "Cannot save that scheme."
+msgstr "Невозможно сохранить структуру"
+
+#: core/controllers/admin/contents.php:600
+msgid "Saving error"
+msgstr "Ошибка при сохранении"
+
+#: core/controllers/admin/contents.php:604
+msgid "Cannot read the file."
+msgstr "Невозможно открыть xml/yaml."
+
+#: core/controllers/admin/contents.php:631
+msgid "The category %n has been added."
+msgstr "Категория \"%n\" добавлена"
+
+#: core/controllers/admin/contents.php:633
+msgid "Cannot insert the category %n."
+msgstr "Невозможно сохранить категорию \"%n\"."
+
+#: core/controllers/admin/contents.php:636
+msgid "A category named %n already exists."
+msgstr "Категория с таким именем уже существует"
+
+#: core/controllers/admin/contents.php:660
+msgid "The category %n has been deleted."
+msgstr "Категория \"%n\" удалена"
+
+#: core/controllers/admin/contents.php:715
+msgid "The type named %n has been removed."
+msgstr "Тип записей %n удален"
+
+#: core/controllers/admin/hierarchies.php:47
+msgid "The hierarchy %n has been added."
+msgstr "Связь \"%n\" добавлена"
+
+#: core/controllers/admin/hierarchies.php:57
+msgid "The selected hierarchies have been deleted."
+msgstr "Выбранные связи удалены"
+
+#: core/controllers/admin/import.php:45
+msgid "Choose one..."
+msgstr "Выбрать"
+
+#: core/controllers/admin/import.php:62
+msgid "Adapter not found."
+msgstr "Обработчик не найден"
+
+#: core/controllers/admin/import.php:67
+msgid "You must upload a file."
+msgstr "Необходимо загрузить файл"
+
+#: core/controllers/admin/import.php:79
+msgid "The mime-type of the file is not allowed by this adapter."
+msgstr "Запрошенный тип файла не может быть обработан. "
+
+#: core/controllers/admin/import.php:102
+#, php-format
+msgid "%c records have been imported."
+msgstr "%c записей импортировано"
+
+#: core/controllers/admin/install.php:126
+msgid "%n has been installed!"
+msgstr "%n установлен"
+
+#: core/controllers/admin/modules.php:42
+msgid "The module has been removed."
+msgstr "Модуль удален"
+
+#: core/controllers/admin/modules.php:57
+msgid "The module has been installed."
+msgstr "Модуль установлен"
+
+#: core/controllers/admin/modules.php:59
+msgid "The module can not be installed right now."
+msgstr "Установка невозможна"
+
+#: core/controllers/admin/modules.php:97
+msgid "The module %m has no documentation."
+msgstr "Модуль \"%n\" не имеет документации"
+
+#: core/controllers/admin/preview.php:43
+msgid "The are no pages that are listing this record."
+msgstr "Данный записи не выводятся ни на одной странице"
+
+#: core/controllers/admin/schemes.php:50
+msgid "The tables of the content type %n has been rebuilded."
+msgstr "БД для типа \"%n\" перестроена"
+
+#: core/controllers/admin/schemes.php:77
+msgid "Cannot renew the cache."
+msgstr "Невозможно обновить кеш"
+
+#: core/controllers/admin/schemes.php:79
+msgid "The cache of the content types has been cleared."
+msgstr "Кеш очищен"
+
+#: core/controllers/admin/settings.php:57
+msgid "The settings has been updated"
+msgstr "Настройки сохранены"
+
+#: core/controllers/admin/themes.php:57
+msgid "The settings have been updated."
+msgstr "Настройки сохранены"
+
+#: core/controllers/admin/themes.php:154
+#, php-format
+msgid "The folder %d has not been found on the filesystem."
+msgstr "Директория \"%d\" не найдена в структуре сайта"
+
+#: core/controllers/admin/themes.php:159
+msgid "The theme %n does not exists."
+msgstr "Тема \"%n\" не существует"
+
+#: core/controllers/admin/users.php:72
+msgid "The user has been deleted."
+msgstr "Пользователь удален"
+
+#: core/controllers/admin/users.php:131
+msgid "The user informations have been updated."
+msgstr "Профиль пользователя обновлен"
+
+#: core/controllers/admin/users.php:152
+msgid "User not found"
+msgstr "Пользователь не найден"
+
+#: core/controllers/admin/users.php:218
+msgid "The group has been updated."
+msgstr "Группа обновлена"
+
+#: core/controllers/admin/users.php:225
+msgid "A group with that name already exists."
+msgstr "Группа с указанным именем существует"
+
+#: core/controllers/admin/users.php:236
+msgid "The group has been created."
+msgstr "Группа создана"
+
+#: core/controllers/admin/users.php:255
+msgid "The requested group has not been found."
+msgstr "Група не найдена"
+
+#: core/controllers/admin/users.php:285
+msgid "You cannot delete your own group."
+msgstr "Невозможно удалить группу"
+
+#: core/controllers/admin/users.php:292
+msgid "The group has been deleted."
+msgstr "Группа удалена"
+
+#: core/dispatchers/dispatcher_default.php:44
+#: core/dispatchers/dispatcher_default.php:133
+#: core/dispatchers/dispatcher_default.php:145
+msgid "Page not found"
+msgstr "Страница не найдена"
+
+#: core/errors/error_custom.php:55 core/errors/error_custom.php:65
+msgid "Go back"
+msgstr "назад"
+
+#: core/helpers/website_helper.php:52
+msgid "You have no rights to access this page."
+msgstr "нет прав для доступа"
+
+#: core/libraries/Bancha_Profiler.php:84
+msgid "Edit this content"
+msgstr "Редактировать запись"
+
+#: core/libraries/Bancha_Profiler.php:91
+msgid "Edit this page"
+msgstr "Редактировать страницу"
+
+#: core/libraries/Bancha_Profiler.php:99
+msgid "Live"
+msgstr "Опубликованное"
+
+#: core/libraries/Bancha_Profiler.php:99
+#: core/views/admin/content/documents_finder.php:83
+#: core/views/admin/content/record_edit.php:338
+#: core/views/admin/repository/ajax-finder.php:83
+msgid "Preview"
+msgstr "Просмотр"
+
+#: core/libraries/Bancha_Profiler.php:101
+msgid "Back to admin"
+msgstr "в админку"
+
+#: core/libraries/Bancha_Profiler.php:102
+msgid "Switch to preview"
+msgstr "к просмотру"
+
+#: core/libraries/Bancha_Profiler.php:102
+msgid "Switch to published contents"
+msgstr "к активной версии"
+
+#: core/libraries/Bancha_Profiler.php:104
+msgid "Open profiler"
+msgstr "открыть профайлер"
+
+#: core/libraries/bancha/blocks.php:126
+msgid "Delete section"
+msgstr "Удалить секцию"
+
+#: core/libraries/bancha/content.php:126
+msgid "You cannot create a content type named [cache]."
+msgstr "Нельзя создать тип записи [cache]."
+
+#: core/libraries/bancha/content.php:126
+msgid "Name reserved"
+msgstr "Название зарезервировано"
+
+#: core/libraries/bancha/content.php:133
+msgid "A content type named %n already exists"
+msgstr "Тип записи \"%n\" существует."
+
+#: core/libraries/bancha/content.php:134
+msgid "Cannot create that type"
+msgstr "Невозможно"
+
+#: core/libraries/bancha/content.php:145
+msgid "Cannot insert that content type."
+msgstr "Невозможно"
+
+#: core/libraries/bancha/content.php:190
+msgid "Cannot delete the template view directory for the content type %n."
+msgstr "Невозможно удалить директорию \"%n\"."
+
+#: core/libraries/bancha/form_renderer.php:34
+#: core/views/admin/content/record_edit.php:427
+#: core/views/admin/content/type_categories.php:8
+msgid "Categories"
+msgstr "Категории"
+
+#: core/libraries/bancha/form_renderer.php:37
+#: core/views/admin/content/record_edit.php:466
+#: core/views/admin/layout/header.php:122
+msgid "Hierarchies"
+msgstr "Структура"
+
+#: core/libraries/bancha/form_renderer.php:40
+msgid "Relations"
+msgstr "Связи"
+
+#: core/libraries/bancha/installer.php:329
+msgid "Administrators"
+msgstr "Администраторы"
+
+#: core/libraries/bancha/installer.php:329
+msgid "Editors"
+msgstr "Редакторы"
+
+#: core/libraries/bancha/installer.php:378
+msgid "Default content type not defined"
+msgstr "Не установлен тип по умолчанию"
+
+#: core/libraries/bancha/installer.php:553
+msgid "My first post"
+msgstr "Первая запись"
+
+#: core/libraries/bancha/installer.php:554
+msgid "Hello world"
+msgstr "Hello world"
+
+#: core/libraries/bancha/installer.php:596
+msgid "Hello world by a sample page."
+msgstr "Hello world by a sample page."
+
+#: core/libraries/bancha/xml.php:89
+msgid "Type not set."
+msgstr "Тип не задан"
+
+#: core/libraries/bancha/xml.php:371
+msgid "Primary key or table not defined for the content type %n."
+msgstr "Не назначен уникальный ключ для  \"%n\"."
+
+#: core/libraries/bancha/xml.php:371 core/libraries/bancha/xml.php:485
+#: core/libraries/bancha/xml.php:487 core/libraries/bancha/xml.php:503
+#: core/libraries/bancha/xml.php:529 core/libraries/bancha/xml.php:534
+msgid "XML parser: Error"
+msgstr "Ошибка парсинга XML"
+
+#: core/libraries/bancha/xml.php:475
+msgid "Untitled"
+msgstr "Без названия"
+
+#: core/libraries/bancha/xml.php:485
+msgid ""
+"One of the fieldsets of type %n does not have the name attribute (mandatory)."
+msgstr "Ошибка с полями"
+
+#: core/libraries/bancha/xml.php:487
+msgid "The type %t has more than one fieldset named %n."
+msgstr "Дубликаты полей"
+
+#: core/libraries/bancha/xml.php:503
+msgid "One of the fields of type %t does not have a name."
+msgstr "Ошибка в имени поля"
+
+#: core/libraries/bancha/xml.php:529
+msgid "The field name %n is reserved (Type: %t) and needs to be changed!"
+msgstr "Имя поля нельзя использовать. зарезервировано системой"
+
+#: core/libraries/bancha/xml.php:534
+msgid ""
+"The value of the node named type (field: %n, type %t) does not exists. "
+"Allowed values are: %v"
+msgstr "Неправильный тип данных в поле"
+
+#: core/libraries/bancha/adapters/adapter_wordpress.php:87
+msgid "Without title"
+msgstr "без заголовка"
+
+#: core/libraries/bancha/templates/type_views/list.php:33
+msgid "View detail"
+msgstr "подробнее"
+
+#: core/models/bancha/model_hierarchies.php:105
+msgid "You cannot create a hierarchy without a name."
+msgstr "Струкутуру нужно назвать"
+
+#: core/models/bancha/model_records.php:532
+msgid "Cannot build the record."
+msgstr "Ошибка при компиляции"
+
+#: core/views/admin/auth/login.php:7
+msgid "Administration login"
+msgstr "Вход в ЦУП"
+
+#: core/views/admin/auth/login.php:9 core/views/admin/layout/header.php:47
+msgid "Back to site"
+msgstr "на сайт"
+
+#: core/views/admin/auth/login.php:19
+msgid "Please log in with your provided credentials"
+msgstr " "
+
+#: core/views/admin/auth/login.php:23 core/views/admin/users/list.php:42
+msgid "Username"
+msgstr "Логин"
+
+#: core/views/admin/auth/login.php:30
+msgid "Password"
+msgstr "Пароль"
+
+#: core/views/admin/auth/login.php:39
+#: core/views/admin/installer/success.php:24
+msgid "Login"
+msgstr "Ок"
+
+#: core/views/admin/auth/login.php:40
+msgid "Remember me"
+msgstr "запомнить"
+
+#: core/views/admin/content/documents_finder.php:9
+#: core/views/admin/repository/ajax-finder.php:9
+msgid "Browse attachments"
+msgstr "просмотр вложений"
+
+#: core/views/admin/content/documents_finder.php:12
+#: core/views/admin/repository/ajax-finder.php:12
+msgid "Close window"
+msgstr "Закрыть"
+
+#: core/views/admin/content/documents_finder.php:20
+#: core/views/admin/layout/header.php:106
+#: core/views/admin/repository/ajax-finder.php:20
+#: core/views/admin/repository/list.php:7
+msgid "Repository"
+msgstr "Репозиторий"
+
+#: core/views/admin/content/documents_finder.php:21
+#: core/views/admin/content/documents_finder.php:78
+#: core/views/admin/repository/ajax-finder.php:21
+#: core/views/admin/repository/ajax-finder.php:78
+msgid "Record documents"
+msgstr "Где используется"
+
+#: core/views/admin/content/documents_finder.php:26
+#: core/views/admin/repository/ajax-finder.php:26
+msgid "Documents repository"
+msgstr "Библиотека файлов"
+
+#: core/views/admin/content/documents_finder.php:28
+#: core/views/admin/repository/ajax-finder.php:28
+msgid "Here you can find the uploaded documents."
+msgstr "Все загружаемое - тут"
+
+#: core/views/admin/content/documents_finder.php:41
+#: core/views/admin/repository/ajax-finder.php:41
+#: core/views/admin/repository/list.php:35
+msgid "Upload file"
+msgstr "Загрузить файл"
+
+#: core/views/admin/content/documents_finder.php:50
+#: core/views/admin/content/documents_finder.php:83
+#: core/views/admin/repository/ajax-finder.php:50
+#: core/views/admin/repository/ajax-finder.php:83
+#: core/views/admin/repository/list.php:44
+msgid "Thumbnail"
+msgstr "Миниатюра"
+
+#: core/views/admin/content/documents_finder.php:51
+#: core/views/admin/repository/ajax-finder.php:51
+#: core/views/admin/repository/list.php:45
+#: core/views/admin/themes/theme.php:45
+msgid "Filename"
+msgstr "Имя файла"
+
+#: core/views/admin/content/documents_finder.php:52
+#: core/views/admin/repository/ajax-finder.php:52
+#: core/views/admin/repository/list.php:46
+msgid "Preset"
+msgstr "Настройка"
+
+#: core/views/admin/content/documents_finder.php:53
+#: core/views/admin/content/documents_finder.php:89
+#: core/views/admin/content/documents_finder.php:90
+#: core/views/admin/content/documents_finder.php:91
+#: core/views/admin/repository/ajax-finder.php:53
+#: core/views/admin/repository/ajax-finder.php:89
+#: core/views/admin/repository/ajax-finder.php:90
+#: core/views/admin/repository/ajax-finder.php:91
+#: core/views/admin/repository/list.php:47
+msgid "Choose"
+msgstr "использовать"
+
+#: core/views/admin/content/documents_finder.php:54
+#: core/views/admin/content/record_list.php:228
+#: core/views/admin/content/translations.php:41
+#: core/views/admin/modules/list.php:31 core/views/admin/modules/list.php:64
+#: core/views/admin/repository/ajax-finder.php:54
+#: core/views/admin/repository/list.php:48 core/views/admin/users/list.php:73
+msgid "Actions"
+msgstr "действия"
+
+#: core/views/admin/content/documents_finder.php:66
+#: core/views/admin/repository/ajax-finder.php:66
+msgid "Select"
+msgstr "Выбрать"
+
+#: core/views/admin/content/documents_finder.php:68
+#: core/views/admin/repository/ajax-finder.php:68
+#: core/views/admin/repository/list.php:62
+msgid "Apply preset"
+msgstr "применить настройку"
+
+#: core/views/admin/content/documents_finder.php:69
+#: core/views/admin/content/record_edit.php:382
+#: core/views/admin/repository/ajax-finder.php:69
+#: core/views/admin/repository/list.php:63
+msgid "Delete file"
+msgstr "удалить"
+
+#: core/views/admin/content/documents_finder.php:83
+#: core/views/admin/content/record_edit.php:338
+#: core/views/admin/repository/ajax-finder.php:83
+msgid "Original"
+msgstr "Оригинал"
+
+#: core/views/admin/content/documents_finder.php:83
+#: core/views/admin/content/record_edit.php:338
+#: core/views/admin/repository/ajax-finder.php:83
+msgid "Resized"
+msgstr "Ресайз"
+
+#: core/views/admin/content/documents_finder.php:83
+#: core/views/admin/content/record_edit.php:338
+#: core/views/admin/content/record_edit.php:376
+#: core/views/admin/repository/ajax-finder.php:83
+msgid "Alternative text"
+msgstr "Альт"
+
+#: core/views/admin/content/documents_finder.php:89
+#: core/views/admin/content/documents_finder.php:90
+#: core/views/admin/content/record_edit.php:348
+#: core/views/admin/content/record_edit.php:349
+#: core/views/admin/modules/list.php:39
+#: core/views/admin/repository/ajax-finder.php:89
+#: core/views/admin/repository/ajax-finder.php:90
+#: core/views/admin/repository/list.php:60
+msgid "View"
+msgstr "просмотр"
+
+#: core/views/admin/content/documents_finder.php:93
+#: core/views/admin/content/record_edit.php:352
+#: core/views/admin/repository/ajax-finder.php:93
+msgid "Delete image"
+msgstr "удоалить"
+
+#: core/views/admin/content/documents_finder.php:100
+#: core/views/admin/repository/ajax-finder.php:100
+msgid "No attachments found for this record."
+msgstr "Нет прикрепленных файлов"
+
+#: core/views/admin/content/record_edit.php:25
+#: core/views/admin/content/record_edit.php:42
+msgid "Edit content"
+msgstr "Правка"
+
+#: core/views/admin/content/record_edit.php:28
+msgid "Back to list"
+msgstr "назад к списку"
+
+#: core/views/admin/content/record_edit.php:40
+#: core/views/admin/content/record_list.php:13
+#: core/views/admin/content/record_list.php:23
+#: core/views/admin/content/type_delete.php:21
+#: core/views/admin/content/type_edit_xml.php:20
+#: core/views/admin/content/type_list.php:7
+#: core/views/admin/layout/header.php:59
+msgid "Contents"
+msgstr "Содержание"
+
+#: core/views/admin/content/record_edit.php:40
+#: core/views/admin/content/record_list.php:13
+#: core/views/admin/content/record_list.php:23
+#: core/views/admin/content/type_list.php:7
+#: core/views/admin/layout/header.php:53
+msgid "Pages"
+msgstr "Страницы"
+
+#: core/views/admin/content/record_edit.php:93
+msgid "Page address:"
+msgstr "Адрес:"
+
+#: core/views/admin/content/record_edit.php:292
+#: core/views/admin/content/settings_edit.php:222
+#: core/views/admin/content/type_add.php:57
+#: core/views/admin/content/type_categories.php:72
+#: core/views/admin/hierarchies/list.php:69
+msgid "Add"
+msgstr "добавить"
+
+#: core/views/admin/content/record_edit.php:295
+#: core/views/admin/content/settings_edit.php:225
+msgid "Remove"
+msgstr "удалить"
+
+#: core/views/admin/content/record_edit.php:331
+#: core/views/admin/content/record_edit.php:334
+msgid "You can attach up to %n images"
+msgstr "доступно слотов для загрузки изображений - %n"
+
+#: core/views/admin/content/record_edit.php:333
+msgid "Number of uploadable images excedeed."
+msgstr "всего загружено"
+
+#: core/views/admin/content/record_edit.php:338
+msgid "Order"
+msgstr "Приоритет"
+
+#: core/views/admin/content/record_edit.php:369
+#: core/views/admin/content/record_edit.php:372
+msgid "You can attach up to %n files"
+msgstr "доступно слотов для загрузки файлов  - %n"
+
+#: core/views/admin/content/record_edit.php:371
+msgid "File limit exceeded."
+msgstr "превышен лимит размера"
+
+#: core/views/admin/content/record_edit.php:376
+msgid "File name"
+msgstr "имя файла"
+
+#: core/views/admin/content/record_edit.php:376
+msgid "File type"
+msgstr "тип"
+
+#: core/views/admin/content/record_edit.php:444
+msgid "This type has no categories"
+msgstr "Нет категорий"
+
+#: core/views/admin/content/record_edit.php:474
+msgid "There are no hierarchies"
+msgstr "Нет пользовательской структуры"
+
+#: core/views/admin/content/record_edit.php:500
+msgid "Load"
+msgstr "загрузить"
+
+# Bottone salva
+#: core/views/admin/content/record_edit.php:511
+msgid "Save"
+msgstr "Сохранить"
+
+#: core/views/admin/content/record_edit.php:512
+msgid "Save and go to list"
+msgstr "Сохранить и вернуться к списку"
+
+#: core/views/admin/content/record_edit.php:513
+msgid "Publish and go to list"
+msgstr "Опубликовать  и вернуться к списку"
+
+#: core/views/admin/content/record_edit.php:530
+msgid "Errors"
+msgstr "Ошибки"
+
+#: core/views/admin/content/record_edit.php:533
+#: core/views/admin/themes/section_composer.php:10
+msgid "Close"
+msgstr "закрыть"
+
+#: core/views/admin/content/record_list.php:17
+#: core/views/admin/content/type_list.php:44
+#: core/views/admin/schemes/list.php:55
+msgid "Manage categories"
+msgstr "Управление категориями"
+
+#: core/views/admin/content/record_list.php:39
+msgid "Status"
+msgstr "Статус"
+
+#: core/views/admin/content/record_list.php:58
+#: core/views/admin/content/record_list.php:136
+msgid "Draft"
+msgstr "черновик"
+
+#: core/views/admin/content/record_list.php:58
+#: core/views/admin/content/record_list.php:145
+msgid "Published"
+msgstr "опубликовано"
+
+#: core/views/admin/content/record_list.php:58
+#: core/views/admin/content/record_list.php:139
+msgid "Different"
+msgstr "песочница"
+
+#: core/views/admin/content/record_list.php:112
+msgid "Apply filters"
+msgstr "отфильтровать"
+
+#: core/views/admin/content/record_list.php:142
+msgid "Programmed"
+msgstr "запланировано"
+
+#: core/views/admin/content/record_list.php:212
+msgid "Add child page"
+msgstr "добавить дочернюю"
+
+#: core/views/admin/content/record_list.php:214
+msgid "View children pages"
+msgstr "просмотр дочерних"
+
+#: core/views/admin/content/record_list.php:217
+#: core/views/admin/content/record_list.php:232
+#: core/views/admin/content/type_list.php:53
+#: core/views/admin/schemes/list.php:59 core/views/admin/users/list.php:64
+#: core/views/admin/users/list.php:74
+msgid "Delete"
+msgstr "удалить"
+
+#: core/views/admin/content/record_list.php:217
+msgid "Do you really want to delete this content?"
+msgstr "Точно удалить?"
+
+#: core/views/admin/content/record_list.php:229
+msgid "Publish"
+msgstr "опубликовано"
+
+#: core/views/admin/content/record_list.php:230
+msgid "Unpublish"
+msgstr "скрыто"
+
+#: core/views/admin/content/record_list.php:231
+msgid "Discard draft"
+msgstr "удалить черновик"
+
+#: core/views/admin/content/record_list.php:235
+#: core/views/admin/users/list.php:77
+msgid "Apply to selected"
+msgstr "применить к выбранным"
+
+#: core/views/admin/content/record_list.php:237
+msgid "There are"
+msgstr "Всего"
+
+#: core/views/admin/content/record_list.php:244
+#: core/views/admin/content/type_list.php:67
+#: core/views/admin/schemes/list.php:73
+msgid "add a new one"
+msgstr "добавить"
+
+#: core/views/admin/content/record_list.php:243
+msgid "There are no contents/pages for this type. To start, %a."
+msgstr "Пока пусто. %a"
+
+#: core/views/admin/content/renewed.php:5
+#: core/views/admin/layout/header.php:142
+msgid "Clear cache"
+msgstr "Очистить кеш"
+
+#: core/views/admin/content/settings_edit.php:25
+msgid "Manage settings"
+msgstr "Управление настройками"
+
+#: core/views/admin/content/settings_edit.php:34
+msgid "Scheme"
+msgstr "Тип"
+
+#: core/views/admin/content/settings_edit.php:268
+msgid "Update settings"
+msgstr "Сохранить"
+
+#: core/views/admin/content/translations.php:3
+msgid "Blog"
+msgstr "Блог"
+
+#: core/views/admin/content/translations.php:4
+msgid "New post"
+msgstr "новая запись"
+
+#: core/views/admin/content/translations.php:5
+msgid "Post content"
+msgstr "Содержание"
+
+#: core/views/admin/content/translations.php:6
+msgid "Title"
+msgstr "Заголовок"
+
+#: core/views/admin/content/translations.php:7
+msgid "Visibility date"
+msgstr "Дата публикации"
+
+#: core/views/admin/content/translations.php:8
+msgid "Friendly URL"
+msgstr "ЧПУ"
+
+#: core/views/admin/content/translations.php:9
+msgid "Language"
+msgstr "Язык"
+
+#: core/views/admin/content/translations.php:10
+msgid "Post Content"
+msgstr "Содержание записи"
+
+#: core/views/admin/content/translations.php:11
+msgid "Comments no."
+msgstr "Комментариев"
+
+#: core/views/admin/content/translations.php:12
+msgid "Images and files"
+msgstr "Изображения и файлы "
+
+#: core/views/admin/content/translations.php:13
+#: core/views/admin/repository/list.php:15
+msgid "Images"
+msgstr "Изображения"
+
+#: core/views/admin/content/translations.php:14
+msgid "Files"
+msgstr "Файлы"
+
+#: core/views/admin/content/translations.php:15
+msgid "Meta tags"
+msgstr "Тэги"
+
+#: core/views/admin/content/translations.php:16
+#: core/views/admin/content/type_list.php:27
+#: core/views/admin/schemes/list.php:30 core/views/admin/themes/list.php:19
+msgid "Description"
+msgstr "Описание"
+
+#: core/views/admin/content/translations.php:17
+msgid "Keywords"
+msgstr "Ключевые слова"
+
+#: core/views/admin/content/translations.php:18
+msgid "Comments"
+msgstr "Комментарии"
+
+#: core/views/admin/content/translations.php:19
+msgid "New comment"
+msgstr "Новый комментарий"
+
+#: core/views/admin/content/translations.php:20
+msgid "General informations"
+msgstr "Основное"
+
+#: core/views/admin/content/translations.php:21
+#: core/views/admin/modules/list.php:29 core/views/admin/modules/list.php:63
+msgid "Author"
+msgstr "Об авторе "
+
+#: core/views/admin/content/translations.php:22
+msgid "Website"
+msgstr "Сайт"
+
+#: core/views/admin/content/translations.php:23
+msgid "E-mail address"
+msgstr "E-mail"
+
+#: core/views/admin/content/translations.php:24
+msgid "Message"
+msgstr "Текст"
+
+#: core/views/admin/content/translations.php:25
+msgid "Linked post"
+msgstr "Запись"
+
+#: core/views/admin/content/translations.php:26
+msgid "Menu"
+msgstr "Menu"
+
+#: core/views/admin/content/translations.php:27
+msgid "New page"
+msgstr "Новая страница"
+
+#: core/views/admin/content/translations.php:28
+msgid "Page URL"
+msgstr "Ссылка"
+
+#: core/views/admin/content/translations.php:29
+msgid "Content"
+msgstr "Содержание"
+
+#: core/views/admin/content/translations.php:30
+msgid "Child no."
+msgstr "Вложенных"
+
+#: core/views/admin/content/translations.php:31
+msgid "Aspect"
+msgstr "Дополнительно"
+
+#: core/views/admin/content/translations.php:32
+msgid "Show in menu"
+msgstr "Показывать в меню"
+
+#: core/views/admin/content/translations.php:33
+msgid "Main menu"
+msgstr "Главное"
+
+#: core/views/admin/content/translations.php:34
+msgid "Sitemap"
+msgstr "Карта сайта"
+
+#: core/views/admin/content/translations.php:35
+msgid "Don't show"
+msgstr "Не показывать"
+
+#: core/views/admin/content/translations.php:36
+msgid "View template"
+msgstr "Шаблон"
+
+#: core/views/admin/content/translations.php:37
+msgid "Default"
+msgstr "по умолчанию"
+
+#: core/views/admin/content/translations.php:38
+msgid "Homepage"
+msgstr "Главная"
+
+#: core/views/admin/content/translations.php:39
+msgid "CSS Stylesheet"
+msgstr "CSS"
+
+#: core/views/admin/content/translations.php:40
+msgid "Javascript code"
+msgstr "Javascript"
+
+#: core/views/admin/content/translations.php:42
+msgid "Page cache (minutes)"
+msgstr "Кешировать (минуты)"
+
+#: core/views/admin/content/translations.php:43
+msgid "Priority"
+msgstr "Приоритет"
+
+#: core/views/admin/content/translations.php:44
+msgid "Page action"
+msgstr "Действия страницы"
+
+#: core/views/admin/content/translations.php:45
+msgid "Single text"
+msgstr "Просто текст"
+
+#: core/views/admin/content/translations.php:46
+msgid "Content list"
+msgstr "Список записей"
+
+#: core/views/admin/content/translations.php:47
+msgid "Custom action"
+msgstr "Вызов триггера"
+
+#: core/views/admin/content/translations.php:48
+msgid "External link"
+msgstr "Редирект"
+
+#: core/views/admin/content/translations.php:49
+#: core/views/admin/relations/single.php:32
+msgid "Content type"
+msgstr "Тип записей"
+
+#: core/views/admin/content/translations.php:50
+msgid "Categories (A, B, C)"
+msgstr "Категории"
+
+#: core/views/admin/content/translations.php:51
+msgid "Hierarchies (A, B, C)"
+msgstr "Структура"
+
+#: core/views/admin/content/translations.php:52
+msgid "SQL WHERE (Condition)"
+msgstr "Условие WHERE"
+
+#: core/views/admin/content/translations.php:53
+msgid "Results per page"
+msgstr "Записей на странице"
+
+#: core/views/admin/content/translations.php:54
+msgid "Results order"
+msgstr "Сортировка"
+
+#: core/views/admin/content/translations.php:55
+msgid "Record ID (descending)"
+msgstr "ID (убывание)"
+
+#: core/views/admin/content/translations.php:56
+msgid "Record ID (ascending)"
+msgstr "ID (возрастание)"
+
+#: core/views/admin/content/translations.php:57
+msgid "Publish date (descending)"
+msgstr "Дата публикации (ASC) "
+
+#: core/views/admin/content/translations.php:58
+msgid "RSS/JSON feeds"
+msgstr "RSS/JSON"
+
+#: core/views/admin/content/translations.php:59
+msgid "1"
+msgstr "1"
+
+#: core/views/admin/content/translations.php:60
+msgid "Method/Function name"
+msgstr "Имя функции/метода"
+
+#: core/views/admin/content/translations.php:61
+msgid "Action called at"
+msgstr "Имя триггера "
+
+#: core/views/admin/content/translations.php:62
+msgid "Dispatcher (before rendering)"
+msgstr "До формирования"
+
+#: core/views/admin/content/translations.php:63
+msgid "Inside the theme (while rendering)"
+msgstr "После формирования"
+
+#: core/views/admin/content/translations.php:64
+msgid "Redirect URL"
+msgstr "Ссылка для редиректа"
+
+#: core/views/admin/content/translations.php:65
+msgid "Attachments"
+msgstr "Прикрепленные"
+
+#: core/views/admin/content/translations.php:66
+msgid "Products"
+msgstr "Продукты"
+
+#: core/views/admin/content/translations.php:67
+msgid "New product"
+msgstr "Новый продукт"
+
+#: core/views/admin/content/translations.php:68
+msgid "Effects"
+msgstr "Эффекты"
+
+#: core/views/admin/content/translations.php:69
+msgid "Captions"
+msgstr "Заголовки"
+
+#: core/views/admin/content/type_add.php:8
+msgid "Add new content type"
+msgstr "Добавить новый тип записей"
+
+#: core/views/admin/content/type_add.php:11
+msgid "Back to types list"
+msgstr "Назад к списку"
+
+#: core/views/admin/content/type_add.php:20
+#: core/views/admin/content/type_list.php:11
+#: core/views/admin/schemes/list.php:14
+msgid "Add new type"
+msgstr "Добавить новый"
+
+#: core/views/admin/content/type_add.php:24
+#: core/views/admin/content/type_delete.php:31
+#: core/views/admin/content/type_edit_xml.php:22
+#: core/views/admin/installer/request.php:12
+msgid "WARNING"
+msgstr "ВНИМАНИЕ!"
+
+#: core/views/admin/content/type_add.php:24
+msgid "You can't change the type name after its creation."
+msgstr "Имя файла после создания изменить невозможно"
+
+#: core/views/admin/content/type_add.php:33
+msgid "Type name"
+msgstr "Название"
+
+#: core/views/admin/content/type_add.php:37
+#: core/views/admin/content/type_edit_xml.php:34
+msgid "Type description"
+msgstr "Описание"
+
+#: core/views/admin/content/type_add.php:42
+#: core/views/admin/content/type_list.php:28
+#: core/views/admin/schemes/list.php:31
+msgid "New item label"
+msgstr "Лейба для добавления"
+
+#: core/views/admin/content/type_add.php:43
+msgid "New content"
+msgstr "Новый тип"
+
+#: core/views/admin/content/type_add.php:47
+msgid "Type structure"
+msgstr "Структура"
+
+#: core/views/admin/content/type_add.php:48
+msgid "Simple (Contents)"
+msgstr "Простая (записи)"
+
+#: core/views/admin/content/type_add.php:48
+msgid "Tree (Pages)"
+msgstr "Древовидная (страницы)"
+
+#: core/views/admin/content/type_add.php:52
+msgid "Scheme format"
+msgstr "Формат"
+
+#: core/views/admin/content/type_add.php:53
+msgid "YAML (Recommended)"
+msgstr "YAML (рекомендуется)"
+
+#: core/views/admin/content/type_categories.php:11
+msgid "Back to contents"
+msgstr "назад"
+
+#: core/views/admin/content/type_categories.php:22
+msgid "Categories list"
+msgstr "Список категорий"
+
+#: core/views/admin/content/type_categories.php:23
+#: core/views/admin/content/type_categories.php:63
+msgid "Add new category"
+msgstr "добавить категорию"
+
+#: core/views/admin/content/type_categories.php:40
+#: core/views/admin/content/type_categories.php:69
+msgid "Category name"
+msgstr "Название категории"
+
+#: core/views/admin/content/type_categories.php:50
+msgid "Do you want to delete this category?"
+msgstr "Вы хотите удалить категорию?"
+
+#: core/views/admin/content/type_categories.php:50
+msgid "Delete category"
+msgstr "удалить"
+
+#: core/views/admin/content/type_categories.php:56
+msgid "This content type has no categories."
+msgstr "Нет категорий"
+
+#: core/views/admin/content/type_categories.php:65
+msgid "Categories permits your contents to be more differents each other."
+msgstr "Предназначены для создания нужной структуры записей."
+
+#: core/views/admin/content/type_categories.php:65
+msgid ""
+"They can be useful to make different extractions and use them such as tags."
+msgstr "Может быть использовано для дополнительного делегирования"
+
+#: core/views/admin/content/type_delete.php:9
+msgid "Type delete"
+msgstr "Удалить"
+
+#: core/views/admin/content/type_delete.php:12
+#: core/views/admin/content/type_delete.php:41
+msgid "Cancel"
+msgstr "отмена"
+
+#: core/views/admin/content/type_delete.php:21
+msgid "Content type delete"
+msgstr "удаление типа записей"
+
+#: core/views/admin/content/type_delete.php:23
+msgid ""
+"If you delete the content type %n, will be also deleted from the filesystem "
+"these files:"
+msgstr "При удалении \"%n\" будут удалены следующие файлы:"
+
+#: core/views/admin/content/type_delete.php:26
+msgid "Content type scheme definition"
+msgstr "Определение структуры"
+
+#: core/views/admin/content/type_delete.php:27
+msgid ""
+"View files related to list/detail actions of this content type (php "
+"templates)."
+msgstr "Просмотр шаблонов относящихся к данному типу записи"
+
+#: core/views/admin/content/type_delete.php:31
+msgid "All contents associated to this type will be deleted."
+msgstr "Все записи данного раздела будут удалены"
+
+#: core/views/admin/content/type_delete.php:31
+#: core/views/admin/content/type_delete.php:34
+msgid ""
+"You can enable/disable this function through the variabile \"DEAD RECORDS\" "
+"in the config file."
+msgstr "Метод может быть отключен в конфиге."
+
+#: core/views/admin/content/type_delete.php:34
+msgid "All contents associated to this type will NOT be deleted."
+msgstr "Все записи данного раздела останутся в базе данных"
+
+#: core/views/admin/content/type_delete.php:40
+msgid "Delete type"
+msgstr "удалить"
+
+#: core/views/admin/content/type_edit_xml.php:9
+#: core/views/admin/content/type_edit_xml.php:20
+#: core/views/admin/content/type_list.php:48
+msgid "Edit scheme"
+msgstr "Изменение типа"
+
+#: core/views/admin/content/type_edit_xml.php:12
+msgid "Discard all"
+msgstr "отменить"
+
+#: core/views/admin/content/type_edit_xml.php:22
+msgid ""
+"A wrong compilation of the scheme may cause a malfunction of the website."
+msgstr "Внимание! Лечение самовольного вмешательства платное. Дорого."
+
+#: core/views/admin/content/type_edit_xml.php:43
+msgid "Structure"
+msgstr "Структура"
+
+#: core/views/admin/content/type_edit_xml.php:47
+msgid "Save scheme"
+msgstr "Сохранить"
+
+#: core/views/admin/content/type_list.php:26
+#: core/views/admin/modules/list.php:26 core/views/admin/modules/list.php:60
+#: core/views/admin/schemes/list.php:29 core/views/admin/themes/list.php:18
+#: core/views/admin/users/list.php:43
+msgid "Name"
+msgstr "Имя"
+
+#: core/views/admin/content/type_list.php:29
+#: core/views/admin/schemes/list.php:32
+msgid "Structure type"
+msgstr "Вложенность"
+
+#: core/views/admin/content/type_list.php:42
+#: core/views/admin/schemes/list.php:48
+msgid "Tree"
+msgstr "Да"
+
+#: core/views/admin/content/type_list.php:42
+#: core/views/admin/schemes/list.php:48
+msgid "Simple"
+msgstr "Нет"
+
+#: core/views/admin/content/type_list.php:66
+#: core/views/admin/schemes/list.php:72
+msgid "No type of contents found. To start, %link."
+msgstr "Пока пусто. %link."
+
+#: core/views/admin/dashboard/events.php:7
+msgid "Last %n events."
+msgstr "Лог"
+
+#: core/views/admin/dashboard/events.php:17
+msgid "Today"
+msgstr "Сегодня"
+
+#: core/views/admin/dashboard/events.php:17
+msgid "at %time"
+msgstr "в %time"
+
+#: core/views/admin/dashboard/events.php:28
+#: core/views/admin/dashboard/events.php:32
+msgid "Unknown"
+msgstr "неизвестно"
+
+#: core/views/admin/dashboard/events.php:43
+msgid "%u updated the content %c of type %t."
+msgstr "%u updated the content %c of type %t."
+
+#: core/views/admin/dashboard/events.php:51
+msgid "%u created a new content of type %t named %c."
+msgstr "%u created a new content of type %t named %c."
+
+#: core/views/admin/dashboard/events.php:60
+msgid "%u published the content %c of type %t."
+msgstr "%u published the content %c of type %t."
+
+#: core/views/admin/dashboard/events.php:69
+#, php-format
+msgid "%u depublished the content %c."
+msgstr "%u depublished the content %c."
+
+#: core/views/admin/dashboard/events.php:77
+#, php-format
+msgid "%u installed %c."
+msgstr "%u installed %c."
+
+#: core/views/admin/dashboard/events.php:85
+#, php-format
+msgid "%u login."
+msgstr "%u login."
+
+#: core/views/admin/dashboard/events.php:89
+#, php-format
+msgid "%u logout."
+msgstr "%u logout."
+
+#: core/views/admin/hierarchies/list.php:18
+msgid "Manage hierarchies"
+msgstr "Управление структурами"
+
+#: core/views/admin/hierarchies/list.php:24
+#: core/views/admin/hierarchies/list.php:32
+msgid "Hierarchies list"
+msgstr "список"
+
+#: core/views/admin/hierarchies/list.php:25
+#: core/views/admin/hierarchies/list.php:57
+msgid "Add hierarchy"
+msgstr "добавить"
+
+#: core/views/admin/hierarchies/list.php:33
+msgid "Here you will find the inserted hierarchies."
+msgstr "Все"
+
+#: core/views/admin/hierarchies/list.php:42
+msgid "Delete selected"
+msgstr "удалить выбранные"
+
+#: core/views/admin/hierarchies/list.php:48
+msgid "There are no hierarchies."
+msgstr "Пока пусто"
+
+#: core/views/admin/hierarchies/list.php:63
+msgid "Hierarchy name"
+msgstr "Название"
+
+#: core/views/admin/hierarchies/list.php:66
+msgid "Parent hierarchy"
+msgstr "Родительская"
+
+#: core/views/admin/import/records.php:7
+#: core/views/admin/layout/header.php:132
+msgid "Import/export data"
+msgstr "Импорт/Экспорт"
+
+#: core/views/admin/import/records.php:14
+#: core/views/admin/import/records.php:43
+msgid "Import records"
+msgstr "Импорт записей"
+
+#: core/views/admin/import/records.php:25
+msgid "Destination content type"
+msgstr "тип для данных"
+
+#: core/views/admin/import/records.php:31
+msgid "Adapter type"
+msgstr "Парсер"
+
+#: core/views/admin/import/records.php:37
+msgid "Source file"
+msgstr "Источник"
+
+#: core/views/admin/import/report.php:3
+msgid "Import report"
+msgstr "Импорт отчета"
+
+#: core/views/admin/installer/request.php:7
+#: core/views/admin/installer/success.php:4
+msgid "%n Installer"
+msgstr "Установщик %n"
+
+#: core/views/admin/installer/request.php:12
+msgid "Bancha is already installed on this database!"
+msgstr "Bancha è già installato su questo database!"
+
+#: core/views/admin/installer/request.php:13
+msgid ""
+"To reinstall Bancha, you need to delete the \"is_installed\" key on the "
+"\"settings\" table."
+msgstr ""
+"Per reinstallare Bancha, devi eliminare la chiave \"is_installed\" della "
+"tabella \"settings\"."
+
+#: core/views/admin/installer/request.php:21
+msgid ""
+"Bancha will be installed on the current host. Please select the operations "
+"that you want to perform"
+msgstr ""
+"Bancha sarà installato sull'host corrente. Seleziona le operazioni che "
+"desideri eseguire."
+
+#: core/views/admin/installer/request.php:25
+msgid "Select operations"
+msgstr "Seleziona operazioni"
+
+#: core/views/admin/installer/request.php:27
+msgid "Remove/Create directories"
+msgstr "Elimina e ricrea le directory"
+
+#: core/views/admin/installer/request.php:28
+msgid "Drop records and create tables"
+msgstr "Elimina records e ricrea tabelle"
+
+#: core/views/admin/installer/request.php:29
+msgid "Restore default types"
+msgstr "Ripristina tipi predefiniti"
+
+#: core/views/admin/installer/request.php:30
+msgid "Restore default settings"
+msgstr "Ripristina impostazioni predefinite"
+
+#: core/views/admin/installer/request.php:31
+msgid "Clear and rebuild cache"
+msgstr "Svuota e ricrea cache"
+
+#: core/views/admin/installer/request.php:32
+msgid "Enable event logging"
+msgstr "Abilita logging degli eventi"
+
+#: core/views/admin/installer/request.php:37
+msgid "Admin default language"
+msgstr "Lingua default amministrazione"
+
+#: core/views/admin/installer/request.php:44
+msgid "Install type"
+msgstr "Tipo di installazione"
+
+#: core/views/admin/installer/request.php:47
+msgid "Full"
+msgstr "Completa"
+
+#: core/views/admin/installer/request.php:48
+msgid "Minimal"
+msgstr "Minimale"
+
+#: core/views/admin/installer/request.php:54
+msgid "Theme"
+msgstr "Tema"
+
+#: core/views/admin/installer/request.php:62
+msgid "Preinstalled schemes format"
+msgstr "Формат пользовательских разделов"
+
+#: core/views/admin/installer/request.php:74
+#: core/views/admin/modules/list.php:96
+msgid "Install"
+msgstr "Установка"
+
+#: core/views/admin/layout/footer.php:25
+msgid "Page rendered in %n seconds using %m of memory."
+msgstr "Страница создана за %n секунд, использовано памяти %m"
+
+#: core/views/admin/layout/header.php:65 core/views/admin/users/list.php:27
+msgid "Users"
+msgstr "Пользователи"
+
+#: core/views/admin/layout/header.php:71 core/views/admin/users/list.php:18
+msgid "Add new user"
+msgstr "Добавить"
+
+#: core/views/admin/layout/header.php:77 core/views/admin/users/list.php:14
+msgid "Users list"
+msgstr "Список"
+
+#: core/views/admin/layout/header.php:82 core/views/admin/users/list.php:20
+#: core/views/admin/users/groups/list.php:10
+#: core/views/admin/users/groups/list.php:20
+msgid "Groups and permissions"
+msgstr "Группы"
+
+#: core/views/admin/layout/header.php:90
+msgid "Manage"
+msgstr "Управление"
+
+#: core/views/admin/layout/header.php:95 core/views/admin/schemes/list.php:9
+msgid "Content types"
+msgstr "Типы данных"
+
+#: core/views/admin/layout/header.php:101 core/views/admin/modules/list.php:5
+msgid "Modules"
+msgstr "Модули"
+
+#: core/views/admin/layout/header.php:111
+msgid "Settings"
+msgstr "Настройки"
+
+#: core/views/admin/layout/header.php:117
+msgid "Themes"
+msgstr "Темы"
+
+#: core/views/admin/layout/header.php:127
+msgid "Last events"
+msgstr "Лог"
+
+#: core/views/admin/layout/header.php:137
+#: core/views/admin/unit_tests/intro.php:3
+msgid "Unit tests"
+msgstr "Утилиты"
+
+#: core/views/admin/layout/header.php:146
+msgid "Logout"
+msgstr "Выход"
+
+#: core/views/admin/layout/header.php:156
+msgid "Extensions"
+msgstr "Плагины"
+
+#: core/views/admin/modules/docs.php:6
+msgid "Module documentation"
+msgstr "документация"
+
+#: core/views/admin/modules/docs.php:9
+msgid "Back to modules"
+msgstr "Назад к модулям"
+
+#: core/views/admin/modules/list.php:13
+msgid "You can manually upload a package to install it."
+msgstr "Доступна установка вручную"
+
+#: core/views/admin/modules/list.php:21
+msgid "Installed modules"
+msgstr "Установленные модели"
+
+#: core/views/admin/modules/list.php:27
+msgid "Documentation"
+msgstr "Мануал"
+
+#: core/views/admin/modules/list.php:28 core/views/admin/modules/list.php:62
+msgid "Version"
+msgstr "Версия"
+
+#: core/views/admin/modules/list.php:42
+msgid "Uninstall"
+msgstr "Удалить"
+
+#: core/views/admin/modules/list.php:49
+msgid "There are no modules installed."
+msgstr "Нет модулей"
+
+#: core/views/admin/modules/list.php:55
+msgid "Available modules on Bancha Modules Repository"
+msgstr "Доступные модули"
+
+#: core/views/admin/modules/list.php:61
+msgid "Category"
+msgstr "Категория"
+
+#: core/views/admin/modules/list.php:89
+msgid "Update"
+msgstr "Обновить"
+
+#: core/views/admin/modules/list.php:92
+msgid "Already installed"
+msgstr "Уже установлен"
+
+#: core/views/admin/relations/single.php:22
+msgid "This record has no relations of this type."
+msgstr "Нет связей"
+
+#: core/views/admin/relations/single.php:31
+msgid "Content name"
+msgstr "Имя"
+
+#: core/views/admin/relations/single.php:33
+msgid "Insert date"
+msgstr "Тип"
+
+#: core/views/admin/repository/list.php:20
+msgid "Images repository"
+msgstr "Медиа"
+
+#: core/views/admin/repository/list.php:22
+msgid "Here you can find the last uploaded images."
+msgstr "Список изображений"
+
+#: core/views/admin/schemes/list.php:12
+msgid "Rebuild schemes cache"
+msgstr "перестроить таблицы типов"
+
+#: core/views/admin/schemes/list.php:33
+msgid "Table"
+msgstr "Таблица черновиков"
+
+#: core/views/admin/schemes/list.php:34
+msgid "Stage table"
+msgstr "Таблица опубликованных"
+
+#: core/views/admin/schemes/list.php:52
+msgid "Rebuild tables"
+msgstr "перестроить таблицы"
+
+#: core/views/admin/themes/list.php:4
+msgid "Installed themes"
+msgstr "Установленные темы"
+
+#: core/views/admin/themes/list.php:20
+msgid "Desktop theme"
+msgstr "Браузерная тема"
+
+#: core/views/admin/themes/list.php:21
+msgid "Mobile theme"
+msgstr "Мобильная тема"
+
+#: core/views/admin/themes/list.php:32
+msgid "Manage templates"
+msgstr "Управление шаблонами"
+
+#: core/views/admin/themes/list.php:39
+msgid "Apply changes"
+msgstr "Применить"
+
+#: core/views/admin/themes/list.php:45
+msgid "There are no installed themes."
+msgstr "Нет тем для установки"
+
+#: core/views/admin/themes/section_composer.php:7
+msgid "Sections"
+msgstr "Секции"
+
+#: core/views/admin/themes/section_composer.php:18
+#: core/views/admin/themes/section_composer.php:24
+msgid "Add HTML"
+msgstr "Добавить HTML"
+
+#: core/views/admin/themes/section_composer.php:19
+#: core/views/admin/themes/section_composer.php:36
+msgid "Add PHP code"
+msgstr "Добавить PHP"
+
+#: core/views/admin/themes/template_edit.php:7
+#: core/views/admin/themes/theme.php:31 core/views/admin/themes/theme.php:53
+msgid "Edit blocks"
+msgstr "правка блоков"
+
+#: core/views/admin/themes/template_edit.php:10
+msgid "Back to templates list"
+msgstr "назад к шаблонам"
+
+#: core/views/admin/themes/template_edit.php:37
+msgid "Add section"
+msgstr "Добавить секцию"
+
+#: core/views/admin/themes/template_edit.php:44
+#: core/views/admin/users/groups/edit.php:52
+msgid "Save changes"
+msgstr "Сохранить"
+
+#: core/views/admin/themes/template_edit.php:47
+msgid "This templates has no blocks."
+msgstr "В шаблоне нет блоков"
+
+#: core/views/admin/themes/theme.php:7
+msgid "Theme templates"
+msgstr "Шаблоны темы"
+
+#: core/views/admin/themes/theme.php:23
+msgid "Template name"
+msgstr "Название"
+
+#: core/views/admin/themes/theme.php:31
+msgid "Duplicate template"
+msgstr "Создать дубликат"
+
+#: core/views/admin/unit_tests/intro.php:9
+msgid "Press the button below to start the automatic unit tests."
+msgstr "Тестирование"
+
+#: core/views/admin/unit_tests/intro.php:10
+msgid "Start tests"
+msgstr "начать тестирование"
+
+#: core/views/admin/unit_tests/results.php:3
+msgid "Unit tests results"
+msgstr "Результаты теста"
+
+#: core/views/admin/users/list.php:27
+#: core/views/admin/users/groups/list.php:20
+msgid "List"
+msgstr "Список"
+
+#: core/views/admin/users/list.php:44
+msgid "Surname"
+msgstr "Фамилия"
+
+#: core/views/admin/users/list.php:45
+msgid "Email address"
+msgstr "Email"
+
+#: core/views/admin/users/list.php:46
+msgid "Group"
+msgstr "Группа"
+
+#: core/views/admin/users/list.php:64
+msgid "Do you want to delete this user?"
+msgstr "Удалить пользователя?"
+
+#: core/views/admin/users/list.php:79
+msgid "There are %n users."
+msgstr "Пользователей: %n"
+
+#: core/views/admin/users/groups/edit.php:8
+msgid "Manage group"
+msgstr "Управление группой"
+
+#: core/views/admin/users/groups/edit.php:8
+#: core/views/admin/users/groups/edit.php:52
+msgid "Add group"
+msgstr "Добавить группу"
+
+#: core/views/admin/users/groups/edit.php:11
+msgid "Back to groups list"
+msgstr "Список групп"
+
+#: core/views/admin/users/groups/edit.php:20
+msgid "Group informations"
+msgstr "Инфо о группе"
+
+#: core/views/admin/users/groups/edit.php:36
+#: core/views/admin/users/groups/list.php:33
+msgid "Group name"
+msgstr "Имя"
+
+#: core/views/admin/users/groups/edit.php:39
+msgid "Permissions"
+msgstr "Права"
+
+#: core/views/admin/users/groups/list.php:13
+msgid "Add new group"
+msgstr "добавить"
+
+#: core/views/admin/users/groups/list.php:14
+msgid "Back to users"
+msgstr "Back to users"
+
+#: core/views/admin/users/groups/list.php:45
+msgid "Do you want to delete this group?"
+msgstr "Удалить группу?"
+
+#: core/views/admin/users/groups/list.php:45
+msgid "Delete group"
+msgstr "удалить"
+
+#~ msgid "Parent page"
+#~ msgstr "Родительская"
+
+#~ msgid "ID record (DESC)"
+#~ msgstr "ID (DESC)"
+
+#~ msgid "ID record (ASC)"
+#~ msgstr "ID (ASC)"
+
+#~ msgid "Publish date (DESC)"
+#~ msgstr "Дата публикации (DESC)"
+
+#~ msgid "RSS Feed"
+#~ msgstr "RSS"
+
+#~ msgid "Yes"
+#~ msgstr "Да"
+
+#~ msgid "No"
+#~ msgstr "Нет"
+
+#~ msgid "Action mode"
+#~ msgstr "режим триггера"
+
+#~ msgid "Dispatch"
+#~ msgstr "Dispatcher"
+
+#~ msgid "Content render"
+#~ msgstr "Вывод результатов"
+
+#~ msgid "Blog posts"
+#~ msgstr "Записи блога"
+
+#~ msgid ""
+#~ "These are the currently installed modules. To install a module, just "
+#~ "place it in the application/modules folder."
+#~ msgstr ""
+#~ "Установленные модули. Для установки нового скопируйте его в  application/"
+#~ "modules."
+
+#~ msgid "First name"
+#~ msgstr "Имя"
+
+#~ msgid "Last name"
+#~ msgstr "Фамилия"
+
+#~ msgid "Nuovo prodotto"
+#~ msgstr "Nuovo prodotto"
+
+#~ msgid "The cache has been cleared."
+#~ msgstr "La cache è stata ricreata correttamente."
+
+#~ msgid "Mandatory"
+#~ msgstr "Obbligatorio"
+
+#~ msgid "Welcome back, %u"
+#~ msgstr "Bentornato, %u"
+
+#~ msgid "Export records"
+#~ msgstr "Esportazione dati"
+
+#~ msgid "This function is under construction!"
+#~ msgstr "Questa funzione è attualmente in costruzione!"
+
+#~ msgid "The address of this page is:"
+#~ msgstr "L'indirizzo di questa pagina è:"
+
+#~ msgid "This content can be associated to these categories"
+#~ msgstr "Questo contenuto può essere associato a queste categorie"
+
+#~ msgid "This content can be associated to these hierarchies"
+#~ msgstr "Questo contenuto può essere associato a queste gerarchie"
+
+#~ msgid "Select the operations you want to perform"
+#~ msgstr "Seleziona le operazioni che vuoi effettuare"
+
+#~ msgid "Dashboard"
+#~ msgstr "Panoramica"
+
+#~ msgid "New group"
+#~ msgstr "Nuovo gruppo"
+
+#~ msgid "Choose file"
+#~ msgstr "Scegli file"
+
+#~ msgid "Add module"
+#~ msgstr "Aggiungi modulo"
+
+#~ msgid "File"
+#~ msgstr "File"

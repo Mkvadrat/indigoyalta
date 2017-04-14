@@ -1,0 +1,44 @@
+.user-minipanel{
+	
+	display:block;
+	border-top:1px (@mnColor + #111) solid;
+	border-bottom:1px (@mnColor - #111) solid;
+	background:url(/gui/coreimages/bg_login.png);
+	box-shadow:0 0 10px rgba(0, 0, 0, .5) inset;
+
+	.minipanel-wrapper{
+		display:table;
+		padding:15px 5px 10px;
+		background:fade(@mnColor, 35%);
+		width:100%;
+		vertical-align:top;
+	}
+	.user-miniavatar{
+		display:table-cell;
+		width:90px;
+		vertical-align:top;
+		text-align:center;
+		
+		a{
+			padding:5px;
+			border-radius:5px;
+			display:inline-block;
+			.gradient(darken(@mnIcon,15%),darken(@mnIcon,30%));
+			img{
+				border:1px #d2d8e1 solid;
+				.border-radius(4px);
+				display:block;
+				box-shadow:0 0px 5px darken(@mnColor, 50%), 0 0 5px rgba(0, 0, 0, .5) inset;
+			}
+		}
+		
+		
+	}
+	.user-miniinfo{
+		display:table-cell;
+		vertical-align:top;
+		color:@mnIcon;
+		.text-shadow(0 1px 3px rgba(0, 0, 0, 0.6));
+	}
+	
+}

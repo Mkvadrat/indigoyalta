@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="fastcms-0.9.6" -->
+<content>
+	<name>Navigations</name>
+	<descriptions label="Навигация" new="Новое меню"/>
+	<table key="id_navigation" production="navigations" />
+	<fieldset name="Основная информация" icon="tasks">
+		<field id="id_navigation" column="true">
+			<type>hidden</type>
+			<list>true</list>
+			<admin>true</admin>
+		</field>
+		<field id="menuname" column="true" link="edit">
+			<description>Название</description>
+			<type>text</type>
+			<admin>true</admin>
+			<list>true</list>
+			<rules>required</rules>
+		</field>
+		<field id="location" column="true">
+			<description>Расположение</description>
+			<type>radio</type>
+			<admin>true</admin>
+			<list>true</list>
+			<options>
+				<option value="header">В шапке</option>
+				<option value="sideleft">Левый сайдбар</option>
+				<option value="sideright">Правый сайдбар</option>
+				<option value="footer">В подвале</option>
+			</options>
+		</field>
+		<field id="cssid" column="true">
+			<description>CSS Id</description>
+			<type>text</type>
+			<admin>true</admin>
+			<list>true</list>
+		</field>
+		<field id="cssclass" column="true">
+			<description>CSS Класс</description>
+			<type>text</type>
+			<admin>true</admin>
+			<list>true</list>
+		</field>
+		<field id="nested" column="true">
+			<description>Двевовидный вывод</description>
+			<type>radio</type>
+			<admin>true</admin>
+			<list>true</list>
+			<options>
+				<option value="1">Да</option>
+				<option value="0">Нет</option>
+			</options>
+		</field>
+		<field id="menu_lang" column="true">
+			<description>Язык</description>
+			<type>select</type>
+			<admin>true</admin>
+			<list>true</list>
+			<options>
+				<custom>config_item('languages_select')</custom>
+			</options>
+			<default>eval:$this->lang->current_language</default>
+		</field>
+		<field id="description" column="true">
+			<description>Описание</description>
+			<type>textarea</type>
+			<admin>true</admin>
+			<list>true</list>
+		</field>
+	</fieldset>
+	<fieldset name="Конструктор пунктов меню" icon="arrows">
+		<field id="menutree" column="true">
+			<description>Конструктор пунктов меню</description>
+			<type>menuitemseditor</type>
+			<list>true</list>
+		</field>
+	</fieldset>
+
+</content>

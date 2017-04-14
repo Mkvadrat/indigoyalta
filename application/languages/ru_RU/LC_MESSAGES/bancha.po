@@ -1,0 +1,81 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-18 04:24+0200\n"
+"PO-Revision-Date: 2013-03-18 04:24+0200\n"
+"Last-Translator: Nicholas <nicholas@intesys.it>\n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_trans\n"
+"X-Poedit-Basepath: ../../../../\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-SearchPath-0: themes\n"
+"X-Poedit-SearchPath-1: application/modules\n"
+
+#: themes/admin/translated_texts.php:5
+msgid "Back to admin"
+msgstr "в админку"
+
+#: themes/admin/translated_texts.php:6
+msgid "Edit this content"
+msgstr "редактировать запись"
+
+#: themes/admin/translated_texts.php:7
+msgid "Edit this page"
+msgstr "редактировать страницу"
+
+#: themes/admin/translated_texts.php:8
+msgid "Open profiler"
+msgstr "показать профайлер"
+
+#: themes/admin/translated_texts.php:9
+msgid "Preview"
+msgstr "Просмотр"
+
+#: themes/sandbox/views/type_templates/Blog/detail.php:53
+#: themes/teabag/views/type_templates/Blog/detail.php:60
+#: application/modules/contact_form/view.php:8
+msgid "Name"
+msgstr "имя"
+
+#: themes/sandbox/views/type_templates/Blog/detail.php:56
+#: themes/teabag/views/type_templates/Blog/detail.php:63
+msgid "E-mail address"
+msgstr "E-mail"
+
+#: themes/sandbox/views/type_templates/Blog/detail.php:59
+#: themes/teabag/views/type_templates/Blog/detail.php:66
+#: application/modules/contact_form/view.php:15
+msgid "Message"
+msgstr "Сообщение"
+
+#: themes/sandbox/views/type_templates/Blog/detail.php:62
+#: themes/teabag/views/type_templates/Blog/detail.php:69
+msgid "Send"
+msgstr "Отправить"
+
+#: application/modules/contact_form/view.php:12
+#, fuzzy
+msgid "Email address"
+msgstr "E-mail"
+
+#~ msgid "Website title"
+#~ msgstr "Название сайта"
+
+#~ msgid ""
+#~ "We can't find the page you're looking for. Check out our website for "
+#~ "help, or maybe you should try heading to home."
+#~ msgstr "Страница не найдена."
+
+#~ msgid "You are here: "
+#~ msgstr " "
+
+#~ msgid "View detail"
+#~ msgstr "детально"
+
+#~ msgid "ciao"
+#~ msgstr "Ciao"

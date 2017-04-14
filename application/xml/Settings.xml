@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="bancha-0.9.6" -->
+<content>
+	<name>Settings</name>
+	<descriptions label="Settings" new=""/>
+	<table/>
+	<fieldset name="Общие" icon="cog">
+		<field id="separator_1">
+			<description>Основные настройки</description>
+			<type>separator</type>
+		</field>
+		<field id="website_name_ru">
+			<description>Название сайта</description>
+			<type>text</type>
+		</field>
+		<field id="website_claim_ru">
+			<description>Слоган сайта</description>
+			<type>text</type>
+		</field>
+		<field id="website_adminmail">
+			<description>E-mail (системный)</description>
+			<type>text</type>
+		</field>
+		<field id="website_maintenance">
+			<description>Режим обслуживания</description>
+			<type>radio</type>
+			<options>
+				<option value="F">Отключен</option>
+				<option value="T">Включен</option>
+				<option value="L">Только с авторизацией</option>
+			</options>
+			<default>F</default>
+		</field>
+		<field id="website_desktop_theme">
+			<type>hidden</type>
+			<description>Website desktop theme</description>
+		</field>
+		<field id="website_mobile_theme">
+			<type>hidden</type>
+			<description>Website mobile theme</description>
+		</field>
+		<field id="website_homepage_ru">
+			<type>select</type>
+			<description>Главная</description>
+			<sql cache="false">
+				<select>Title as title, full_uri as value</select>
+				<from>pages</from>
+				<where>lang = 'ru'</where>
+				<order_by>full_uri ASC</order_by>
+			</sql>
+		</field>
+	</fieldset>
+
+
+	<fieldset name="SEO" icon="tags">
+		<field id="separator_global_title">
+			<description>Настройки SEO по умолчанию. Используются только когда не заполнены у страниц непосредственно</description>
+			<type>separator</type>
+		</field>
+		<field id="website_global_title">
+			<description>HTML-тег "Title"</description>
+			<type>text</type>
+		</field>
+		<field id="website_global_keywords">
+			<description>Мета-тег "Keywords"</description>
+			<type>text</type>
+		</field>
+		<field id="website_global_description">
+			<description>Мета-тег "Описание"</description>
+			<type>textarea_code</type>
+		</field>
+	</fieldset>
+
+
+	<fieldset name="Контакты и ссылки" icon="link">
+		<field id="separator_picture">
+			<description>Окно в шапке</description>
+			<type>separator</type>
+		</field>
+		<field id="website_picture">
+			<description>Блок контактов</description>
+			<type>textarea_full</type>
+		</field>
+		<field id="separator_addestate">
+			<description>Кнопка добавления объекта</description>
+			<type>separator</type>
+		</field>
+		<field id="website_addestate">
+			<description>Текст ссылки</description>
+			<type>text</type>
+		</field>
+		<field id="separator_pages">
+			<description>Ссылки с шаблона</description>
+			<type>separator</type>
+		</field>
+		<field id="website_add_page">
+			<type>select</type>
+			<description>Страница добавления объекта</description>
+			<sql cache="false">
+				<select>Title as title, id_record as value</select>
+				<from>pages</from>
+				<where>lang = 'ru'</where>
+				<order_by>full_uri ASC</order_by>
+			</sql>
+		</field>
+		<field id="website_buy_page">
+			<type>select</type>
+			<description>Страница срочного выкупа</description>
+			<sql cache="false">
+				<select>Title as title, id_record as value</select>
+				<from>pages</from>
+				<where>lang = 'ru'</where>
+				<order_by>full_uri ASC</order_by>
+			</sql>
+		</field>
+		<field id="website_order_page">
+			<type>select</type>
+			<description>Страница формы заказа</description>
+			<sql cache="false">
+				<select>Title as title, id_record as value</select>
+				<from>pages</from>
+				<where>lang = 'ru'</where>
+				<order_by>full_uri ASC</order_by>
+			</sql>
+		</field>
+		<field id="website_map_page">
+			<type>select</type>
+			<description>Страница с картой</description>
+			<sql cache="false">
+				<select>Title as title, id_record as value</select>
+				<from>pages</from>
+				<where>lang = 'ru'</where>
+				<order_by>full_uri ASC</order_by>
+			</sql>
+		</field>
+		<field id="website_auth_page">
+			<type>select</type>
+			<description>Страница авторизации</description>
+			<sql cache="false">
+				<select>Title as title, id_record as value</select>
+				<from>pages</from>
+				<where>lang = 'ru'</where>
+				<order_by>full_uri ASC</order_by>
+			</sql>
+		</field>
+
+	</fieldset>
+
+	<fieldset name="Валюта и цены" icon="money">
+		<field id="separator_prices">
+			<description>Цены в каталоге недвижимости</description>
+			<type>separator</type>
+		</field>
+		<field id="website_pricecurrency">
+			<type>select</type>
+			<description>Отображать цены в</description>
+			<options>
+				<option value="usd">Доллары</option>
+				<option value="uah">Гривны</option>
+				<option value="euro">Евро</option>
+			</options>
+		</field>
+		<field id="website_priceempty">
+			<description>Сообщение при пустой цене</description>
+			<type>text</type>
+		</field>
+	</fieldset>
+
+	<fieldset name="Социальные сети" icon="group">
+		<field id="separator_sharerblock">
+			<description>Блок ссылок на странице объекта каталога</description>
+			<type>separator</type>
+		</field>
+		<field id="yandex_share_block_links">
+			<type>text</type>
+			<description>Показывать ссылки</description>
+			<admin>true</admin>
+			<list>true</list>
+		</field>
+		<field id="yandex_share_block_links_cat">
+			<type>text</type>
+			<description>Показывать ссылки в категориях</description>
+			<admin>true</admin>
+			<list>true</list>
+		</field>
+	</fieldset>
+	<fieldset name="Страницы ошибок" icon="link">
+		<field id="separator_404">
+			<description>404</description>
+			<type>separator</type>
+		</field>
+		<field id="website_404_title">
+			<description>Заголовок страницы</description>
+			<type>text</type>
+		</field>
+		<field id="website_404">
+			<description>Содержание страницы</description>
+			<type>textarea_full</type>
+		</field>
+	</fieldset>
+
+</content>

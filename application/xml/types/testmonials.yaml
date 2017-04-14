@@ -1,0 +1,195 @@
+# The content type unique ID
+# This number must match the one on the database
+id  : 14
+
+# The content type unique name
+name: "testmonials"
+
+# Labels and description used on the administration
+descriptions:
+	full_name  : "Отзывы клиентов"
+	new_record : "Новый отзыв"
+
+# Pages must use "true" (aka "tree structure"), while simple contents uses "false"
+tree: false
+
+# The tables (and the primary key) used to save the records
+table:
+	stage       : records_stage
+	production  : records
+	primary_key : id_record
+
+# The order used on the administration lists
+order_by:
+	field : date_update
+	sort  : DESC
+
+# Whether categories and hierarchies should be enabled for this content type
+categories  : false
+hierarchies : false
+
+fieldsets :
+
+	- name   : General informations
+	  icon   : tasks
+	  fields :
+
+	  	# Every record should have a unique id
+	  	# You can change the name if you are using a custom primary key
+	  	id_record :
+	  		column : true
+	  		kind   : numeric
+	  		type   : hidden
+	  		list   : true
+	  		admin  : true
+
+	  	# This field is required to bind records to the owner content type
+	  	# You don't need to provide the default value, the system will automatically recognize it
+	  	id_type :
+	  		column  : true
+	  		kind    : numeric
+	  		type    : hidden
+	  		list    : true
+
+	  	lang :
+	  		column      : true
+	  		type        : hidden
+	  		list        : true
+	  		default     : ru
+	  		length      : 2
+
+	  	date_insert :
+	  		column  : true
+	  		kind    : numeric
+	  		type    : hidden
+	  		list    : true
+	  		default : eval:time()
+				
+	  	date_publish :
+	  		column  : true
+	  		kind    : numeric
+	  		type    : hidden
+	  		list    : true
+	  		default : eval:time()
+				
+	  	status :
+	  		description : Проверен?
+	  		type        : radio
+	  		mandatory   : true
+	  		admin       : true
+	  		list        : true
+	  		default     : n
+	  		length      : 1
+	  		options     :
+	  		    y : Да
+	  		    n : Нет
+
+	  	# Yes, each record should have a title
+	  	title :
+	  		column      : true
+	  		link        : edit
+	  		description : Автор отзыва
+	  		mandatory   : true
+	  		additionaldesc   	: обязательное к заполнению поле. максимум 155 символов.
+	  		rules       : required|min_length[5]|max_length[155]
+	  		type        : text
+	  		admin       : true
+	  		list        : true
+
+	  	type :
+	  		column      : true
+	  		description : Тип отзыва
+	  		type        : radio
+	  		admin       : true
+	  		list        : true
+	  		default     : t
+	  		length      : 1
+	  		options     :
+	  		    t : Текст
+	  		    i : Сканированный документ
+
+	  	uri :
+	  		column      : true
+	  		description : ЧПУ
+	  		type        : text
+	  		list        : true
+
+
+	  	jobposition :
+	  		description : Должность
+	  		type        : text
+	  		admin       : true
+	  		list        : true
+
+	  	comefrom :
+	  		description : Город проживания
+	  		type        : text
+	  		admin       : true
+	  		list        : true
+
+	  	link :
+	  		description : Ссылка на личную страницу
+	  		type        : text
+	  		list        : true
+
+	  	email :
+	  		description : Email
+	  		type        : text
+	  		mandatory   : true
+	  		rules       : required|valid_email
+	  		default        : eval:$this->settings->get('website_adminmail')
+	  		additionaldesc   	: обязательное к заполнению поле. независимо от способа добавления
+	  		list        : true
+
+	  	iploc :
+	  		description : IP
+	  		type        : text
+	  		default        : Indigo
+	  		additionaldesc   	: для отзывов добавленных через форму на сайте. 
+	  		list        : true
+
+	  	# Required if your records needs the stage-production workflow
+	  	published :
+	  		column  : true
+	  		kind    : numeric
+	  		type    : hidden
+	  		list    : true
+	  		default : 0
+	  		length  : 1
+
+	  	content :
+	  		description : Полный текст
+	  		type        : textarea
+	  		list        : true
+
+	  	screenshot :
+	  		description  : Скан
+	  		additionaldesc   	: отсканированная копия рукописного текста
+	  		type         : images
+	  		size         : 4096
+	  		mimes        : jpg|gif|png|jpeg
+	  		original     : true
+	  		encrypt_name : true
+	  		thumbnail    : 60x?
+	  		max          : 1
+	  		list         : true
+
+
+	- name   : SEO
+	  icon   : tags
+	  fields :
+
+	  	meta_h1 :
+	  		description : HTML-тег "H1"
+	  		type        : text
+	  	meta_title :
+	  		description : HTML-тег "Title"
+	  		additionaldesc   	: если не заполнено - используется заголовок
+	  		type        : text
+	  	meta_keywords :
+	  		description : Мета-тег "Keywords"
+	  		type        : text
+	  	meta_description :
+	  		description : Мета-тег "Описание"
+	  		additionaldesc   	: если не заполнено - используется первые 160 символов основного содержания
+	  		type        : textarea_code

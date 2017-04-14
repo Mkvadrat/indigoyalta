@@ -1,0 +1,201 @@
+.gradient(@startColor: #555, @endColor: #333) {
+	background-color: mix(@startColor, @endColor, 60%);
+	background-image: -moz-linear-gradient(top, @startColor, @endColor); // FF 3.6+
+	background-image: -ms-linear-gradient(top, @startColor, @endColor); // IE10
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
+	background-image: -webkit-linear-gradient(top, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+	background-image: -o-linear-gradient(top, @startColor, @endColor); // Opera 11.10
+	background-image: linear-gradient(top, @startColor, @endColor); // The standard
+	filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@startColor,@endColor)); // IE9 and down
+}
+
+
+.indigo-background{
+	background: #d3c7af;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2QzYzdhZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjExJSIgc3RvcC1jb2xvcj0iI2UwZDZiYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2UwZDZiYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijg4JSIgc3RvcC1jb2xvcj0iI2UwZDZiYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkM2M3YWYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(left, #d3c7af 0%, #e0d6bb 11%, #e0d6bb 50%, #e0d6bb 88%, #d3c7af 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#d3c7af), color-stop(11%,#e0d6bb), color-stop(50%,#e0d6bb), color-stop(88%,#e0d6bb), color-stop(100%,#d3c7af));
+	background: -webkit-linear-gradient(left, #d3c7af 0%,#e0d6bb 11%,#e0d6bb 50%,#e0d6bb 88%,#d3c7af 100%);
+	background: -o-linear-gradient(left, #d3c7af 0%,#e0d6bb 11%,#e0d6bb 50%,#e0d6bb 88%,#d3c7af 100%);
+	background: -ms-linear-gradient(left, #d3c7af 0%,#e0d6bb 11%,#e0d6bb 50%,#e0d6bb 88%,#d3c7af 100%);
+	background: linear-gradient(to right, #d3c7af 0%,#e0d6bb 11%,#e0d6bb 50%,#e0d6bb 88%,#d3c7af 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3c7af', endColorstr='#d3c7af',GradientType=1 );
+	position:relative;
+	border-radius: 15px;
+	margin:5px;
+}
+
+.indigo-item{
+	background: #d3c7af;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2QzYzdhZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjExJSIgc3RvcC1jb2xvcj0iI2UwZDZiYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2UwZDZiYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijg4JSIgc3RvcC1jb2xvcj0iI2UwZDZiYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkM2M3YWYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(left, #d3c7af 0%, #e0d6bb 11%, #e0d6bb 50%, #e0d6bb 88%, #d3c7af 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#d3c7af), color-stop(11%,#e0d6bb), color-stop(50%,#e0d6bb), color-stop(88%,#e0d6bb), color-stop(100%,#d3c7af));
+	background: -webkit-linear-gradient(left, #d3c7af 0%,#e0d6bb 11%,#e0d6bb 50%,#e0d6bb 88%,#d3c7af 100%);
+	background: -o-linear-gradient(left, #d3c7af 0%,#e0d6bb 11%,#e0d6bb 50%,#e0d6bb 88%,#d3c7af 100%);
+	background: -ms-linear-gradient(left, #d3c7af 0%,#e0d6bb 11%,#e0d6bb 50%,#e0d6bb 88%,#d3c7af 100%);
+	background: linear-gradient(to right, #d3c7af 0%,#e0d6bb 11%,#e0d6bb 50%,#e0d6bb 88%,#d3c7af 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3c7af', endColorstr='#d3c7af',GradientType=1 );
+	border-radius: 3px;
+}
+.indigo-tl-corner{
+	display:block;
+	height:28px;
+	position:absolute;
+	background:url(/assets/images/ugol1.png) 0 0 no-repeat;
+	width:26px;
+	height:28px;
+	display:block;
+	top:0;
+	left:0;
+	z-index:3;
+}
+.indigo-tr-corner{
+	display:block;
+	height:28px;
+	position:absolute;
+	background:url(/assets/images/ugol2.png) 0 0 no-repeat;
+	width:26px;
+	height:28px;
+	display:block;
+	top:0;
+	right:0;
+	z-index:3;
+}
+.indigo-bl-corner{
+	display:block;
+	height:28px;
+	position:absolute;
+	background:url(/assets/images/ugol4.png) 0 0 no-repeat;
+	width:26px;
+	height:28px;
+	display:block;
+	bottom:0;
+	left:0;
+	z-index:3;
+}
+.indigo-br-corner{
+	display:block;
+	height:28px;
+	position:absolute;
+	background:url(/assets/images/ugol3.png) 0 0 no-repeat;
+	width:26px;
+	height:28px;
+	display:block;
+	bottom:0;
+	right:0;
+	z-index:3;
+}
+
+.selection(@r, @g, @b) {
+	::selection {
+		background: rgb(@r, @g, @b);
+	}
+	::-moz-selection {
+		background: rgb(@r, @g, @b);
+	}
+	img::selection {
+		background: transparent;
+	}
+	img::-moz-selection {
+		background: transparent;
+	}
+}
+
+.box-sizing(@box-model) {
+  -webkit-box-sizing: @box-model;
+     -moz-box-sizing: @box-model;
+          box-sizing: @box-model;
+}
+
+.border-top-radius(@radius) {
+	border-top-right-radius: @radius;
+	border-top-left-radius: @radius;
+}
+.border-right-radius(@radius) {
+	border-bottom-right-radius: @radius;
+	border-top-right-radius: @radius;
+}
+.border-bottom-radius(@radius) {
+	border-bottom-right-radius: @radius;
+	border-bottom-left-radius: @radius;
+}
+.border-left-radius(@radius) {
+	border-bottom-left-radius: @radius;
+	border-top-left-radius: @radius;
+}
+
+
+.transition(@transition) {
+  -webkit-transition: @transition;
+     -moz-transition: @transition;
+       -o-transition: @transition;
+          transition: @transition;
+}
+.transition-delay(@transition-delay) {
+  -webkit-transition-delay: @transition-delay;
+     -moz-transition-delay: @transition-delay;
+       -o-transition-delay: @transition-delay;
+          transition-delay: @transition-delay;
+}
+.transition-duration(@transition-duration) {
+  -webkit-transition-duration: @transition-duration;
+     -moz-transition-duration: @transition-duration;
+       -o-transition-duration: @transition-duration;
+          transition-duration: @transition-duration;
+}
+
+.opacity(@opacity: 100) {
+	filter: e(%("alpha(opacity=%d)", @opacity));
+	-moz-opacity: @opacity / 100;
+	opacity: @opacity / 100;
+}
+
+.placeholder(@color: @input-color-placeholder) {
+  &:-moz-placeholder            { color: @color; } // Firefox 4-18
+  &::-moz-placeholder           { color: @color; } // Firefox 19+
+  &:-ms-input-placeholder       { color: @color; } // Internet Explorer 10+
+  &::-webkit-input-placeholder  { color: @color; padding: 2px; } // Safari and Chrome
+}
+
+.clearfixing() {
+	&:after {
+		content: ".";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+}
+
+// Colors
+@black-10: darken(#fff, 10%);
+@black-20: darken(#fff, 20%);
+@black-30: darken(#fff, 30%);
+@black-40: darken(#fff, 40%);
+@black-50: darken(#fff, 50%);
+@black-60: darken(#fff, 60%);
+@black-70: darken(#fff, 70%);
+@black-80: darken(#fff, 80%);
+@black-90: darken(#fff, 90%);
+
+
+// Grid
+.block(@num) {
+	width: ((@gridWidth - (@gridGutterWidth * @num)) / @num / (@gridWidth / 100)) * 1%;
+}
+
+.column(@num) {
+	width: ((@gridWidth - (@gridGutterWidth * (@num - 1))) / @num / (@gridWidth / 100)) * 1%;
+}
+
+.columns(@factor, @num) {
+	width: (((@gridWidth - (@gridGutterWidth * (@num - 1))) / @num / (@gridWidth / 100)) * @factor) + ((@gridGutterWidth / (@gridWidth / 100)) * (@factor - 1)) * 1%;
+}
+
+.column-push(@num) {
+	left: (((@gridWidth - (@gridGutterWidth * (@num - 1))) / @num / (@gridWidth / 100)) + @gridGutterWidth/(@gridWidth/100)) * 1%;
+}
+
+.columns-push(@factor, @num) {
+	left: ((((@gridWidth - (@gridGutterWidth * (@num - 1))) / @num / (@gridWidth / 100)) * @factor) + ((@gridGutterWidth / (@gridWidth / 100)) * (@factor - 1)) + @gridGutterWidth/(@gridWidth/100)) * 1%;
+}

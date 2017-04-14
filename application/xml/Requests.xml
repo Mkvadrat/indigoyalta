@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<content>
+	<name>Requests</name>
+	<descriptions label="Запросы в СП" new="New request"/>
+	<table key="id_request" production="requests" />
+	<fieldset name="Основные данные" icon="tasks">
+		<field id="author_request">
+			<description>Данные клиента</description>
+			<type>separator</type>
+		</field>
+		<field id="id_request" column="true">
+			<type>hidden</type>
+			<list>true</list>
+			<admin>true</admin>
+		</field>
+		<field id="author" column="true" link="edit">
+			<description>ФИО</description>
+			<type>text</type>
+			<admin>true</admin>
+			<list>true</list>
+		</field>
+		<field id="city" column="true">
+			<description>Город проживания</description>
+			<type>text</type>
+			<admin>true</admin>
+			<list>true</list>
+		</field>
+		<field id="email" column="true">
+			<description>E-mail</description>
+			<type>text</type>
+			<admin>true</admin>
+			<list>true</list>
+		</field>
+		<field id="phone" column="true">
+			<description>Телефон</description>
+			<type>text</type>
+			<admin>true</admin>
+			<list>true</list>
+		</field>
+		<field id="data_request">
+			<description>Данные запроса</description>
+			<type>separator</type>
+		</field>
+		<field id="date_insert" column="true">
+			<description>Дата получения</description>
+			<type>datetime</type>
+			<admin>true</admin>
+			<list>true</list>
+		</field>
+		<field id="section" column="true">
+			<description>Отправлен с раздела</description>
+			<type>radio</type>
+			<admin>true</admin>
+			<list>true</list>
+			<options>
+				<option value="qso">Срочный выкуп</option>
+				<option value="fdb">Обратная связь</option>
+				<option value="aeo">Объявления</option>
+				<option value="olz">Онлайн-заявка</option>
+			</options>
+		</field>
+		<field id="type" column="true">
+			<description>Тип сделки</description>
+			<type>radio</type>
+			<admin>true</admin>
+			<list>true</list>
+			<options>
+				<option value="b">Покупка</option>
+				<option value="s">Продажа</option>
+				<option value="e">Обмен</option>
+				<option value="r">Съем</option>
+				<option value="o">Аренда</option>
+				<option value="n">не указан</option>
+			</options>
+		</field>
+		<field id="estate_type" column="true">
+			<description>Тип недвижимости</description>
+			<type>select</type>
+			<admin>true</admin>
+			<list>true</list>
+			<options>
+				<option value="-">не указано</option>
+				<option value="flat">Квартира</option>
+				<option value="land">Земельный участок</option>
+				<option value="comestate">Коммерческую недвижимость</option>
+				<option value="other">Другую недвижимость</option>
+			</options>
+		</field>
+		<field id="objectid" column="true">
+			<description>Номер объекта в базе агентства</description>
+			<type>text</type>
+		</field>
+		<field id="message" column="true">
+			<description>Текст сообщения</description>
+			<type>textarea</type>
+		</field>
+		<field id="manager_request">
+			<description>Ответ менеджера</description>
+			<type>separator</type>
+		</field>
+		<field id="manager" column="true">
+			<description>Менеджер</description>
+			<type>text</type>
+			<admin>true</admin>
+			<list>true</list>
+			<rules>required</rules>
+		</field>
+		<field id="answer" column="true">
+			<description>Текст сообщения</description>
+			<type>textarea_full</type>
+			<admin>true</admin>
+			<list>true</list>
+		</field>
+		<field id="has_answer" column="true">
+			<description>Ответ отправлен клиенту</description>
+			<type>radio</type>
+			<list>true</list>
+			<admin>true</admin>
+			<options>
+				<option value="0">Нет</option>
+				<option value="1">Да</option>
+			</options>
+		</field>
+		<field id="status" column="true">
+			<description>Статус</description>
+			<type>radio</type>
+			<admin>true</admin>
+			<list>true</list>
+			<options>
+				<option value="n">Новый</option>
+				<option value="c">Закрыт</option>
+				<option value="p">Назначен исполнитель</option>
+			</options>
+		</field>
+	</fieldset>
+	<fieldset name="Файлы от клиента" icon="paperclip">
+		<field id="attachments" column="true">
+			<description>Приложения к запросу</description>
+			<type>attachments</type>
+		</field>
+	</fieldset>
+</content>

@@ -1,0 +1,268 @@
+.gradient(@startColor: #555, @endColor: #333) {
+	background-color: mix(@startColor, @endColor, 60%);
+	background-image: -moz-linear-gradient(top, @startColor, @endColor); // FF 3.6+
+	background-image: -ms-linear-gradient(top, @startColor, @endColor); // IE10
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
+	background-image: -webkit-linear-gradient(top, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+	background-image: -o-linear-gradient(top, @startColor, @endColor); // Opera 11.10
+	background-image: linear-gradient(top, @startColor, @endColor); // The standard
+	filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@startColor,@endColor)); // IE9 and down
+}
+
+.blockMultiplicator(){
+	background-color: #ffffff;
+	border: 1px solid #bec2c8;
+  -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.15), 0 4px 0 -3px #fff, 0 4px 0 -2px #bec2c8, 0 8px 0 -5px #fff, 0 8px 0 -4px #bec2c8;
+  -moz-box-shadow: 0 0 3px rgba(0,0,0,0.15), 0 4px 0 -3px #fff, 0 4px 0 -2px #bec2c8, 0 8px 0 -5px #fff, 0 8px 0 -4px #bec2c8;
+  box-shadow: 0 0 3px rgba(0,0,0,0.15), 0 4px 0 -3px #fff, 0 4px 0 -2px #bec2c8, 0 8px 0 -5px #fff, 0 8px 0 -4px #bec2c8;
+
+}
+
+.selection(@r, @g, @b) {
+	::selection {
+		background: rgb(@r, @g, @b);
+	}
+	::-moz-selection {
+		background: rgb(@r, @g, @b);
+	}
+	img::selection {
+		background: transparent;
+	}
+	img::-moz-selection {
+		background: transparent;
+	}
+}
+
+.box-sizing(@box-model) {
+  -webkit-box-sizing: @box-model;
+     -moz-box-sizing: @box-model;
+          box-sizing: @box-model;
+}
+
+.border-top-radius(@radius) {
+	border-top-right-radius: @radius;
+	border-top-left-radius: @radius;
+}
+.border-right-radius(@radius) {
+	border-bottom-right-radius: @radius;
+	border-top-right-radius: @radius;
+}
+.border-bottom-radius(@radius) {
+	border-bottom-right-radius: @radius;
+	border-bottom-left-radius: @radius;
+}
+.border-left-radius(@radius) {
+	border-bottom-left-radius: @radius;
+	border-top-left-radius: @radius;
+}
+
+
+.transition(@transition) {
+  -webkit-transition: @transition;
+     -moz-transition: @transition;
+       -o-transition: @transition;
+          transition: @transition;
+}
+.ltranslate(@x, @y) {
+  -webkit-transform: translate(@x, @y);
+     -moz-transform: translate(@x, @y);
+       -o-transform: translate(@x, @y);
+          transform: translate(@x, @y);
+}
+.transitionDouble(@transition,@transition1) {
+  -webkit-transition: @transition,@transition1;
+     -moz-transition: @transition,@transition1;
+       -o-transition: @transition,@transition1;
+          transition: @transition,@transition1;
+}
+.transitionTriple(@transition,@transition1,@transition2) {
+  -webkit-transition: @transition,@transition1,@transition2;
+     -moz-transition: @transition,@transition1,@transition2;
+       -o-transition: @transition,@transition1,@transition2;
+          transition: @transition,@transition1,@transition2;
+}
+.transition-delay(@transition-delay) {
+  -webkit-transition-delay: @transition-delay;
+     -moz-transition-delay: @transition-delay;
+       -o-transition-delay: @transition-delay;
+          transition-delay: @transition-delay;
+}
+.transition-duration(@transition-duration) {
+  -webkit-transition-duration: @transition-duration;
+     -moz-transition-duration: @transition-duration;
+       -o-transition-duration: @transition-duration;
+          transition-duration: @transition-duration;
+}
+.animation (@name, @duration: 300ms, @delay: 0, @ease: ease) {
+	-webkit-animation: @name @duration @delay @ease;
+	-moz-animation:    @name @duration @delay @ease;
+	-ms-animation:     @name @duration @delay @ease;
+}
+.opacity(@opacity: 100) {
+	filter: e(%("alpha(opacity=%d)", @opacity));
+	-moz-opacity: @opacity / 100;
+	opacity: @opacity / 100;
+}
+
+.placeholder(@color: @input-color-placeholder) {
+  &:-moz-placeholder            { color: @color; } // Firefox 4-18
+  &::-moz-placeholder           { color: @color; } // Firefox 19+
+  &:-ms-input-placeholder       { color: @color; } // Internet Explorer 10+
+  &::-webkit-input-placeholder  { color: @color; padding: 2px; } // Safari and Chrome
+}
+
+.clearfixing() {
+	&:after {
+		content: ".";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+}
+
+// Colors
+@black-10: darken(#fff, 10%);
+@black-20: darken(#fff, 20%);
+@black-30: darken(#fff, 30%);
+@black-40: darken(#fff, 40%);
+@black-50: darken(#fff, 50%);
+@black-60: darken(#fff, 60%);
+@black-70: darken(#fff, 70%);
+@black-80: darken(#fff, 80%);
+@black-90: darken(#fff, 90%);
+
+.rotate (@deg) {
+	-webkit-transform: rotate(@deg);
+	-moz-transform: 	 rotate(@deg);
+	-ms-transform: 		 rotate(@deg);
+	-o-transform: 		 rotate(@deg);
+}
+.text-shadow (@string: 0 1px 3px rgba(0, 0, 0, 0.25)) {
+	text-shadow: @string;
+}
+.box-shadow (@string) {
+	-webkit-box-shadow: @string;
+	-moz-box-shadow:    @string;
+	box-shadow:         @string;
+}
+.drop-shadow (@x: 0, @y: 1px, @blur: 2px, @spread: 0, @alpha: 0.25) {
+	-webkit-box-shadow:	@x @y @blur @spread rgba(0, 0, 0, @alpha);
+	-moz-box-shadow:	@x @y @blur @spread rgba(0, 0, 0, @alpha);
+	box-shadow:		@x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+.inner-shadow (@x: 0, @y: 1px, @blur: 2px, @spread: 0, @alpha: 0.25) {
+	-webkit-box-shadow: inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+	-moz-box-shadow:    inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+	box-shadow:         inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+.border-radius (@radius: 5px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius:    @radius;
+	border-radius:         @radius;
+
+	-moz-background-clip:    padding;
+	-webkit-background-clip: padding-box;
+	background-clip:         padding-box;
+}
+
+
+// Grid
+.block(@num) {
+	width: ((@gridWidth - (@gridGutterWidth * @num)) / @num / (@gridWidth / 100)) * 1%;
+}
+
+.column(@num) {
+	width: ((@gridWidth - (@gridGutterWidth * (@num - 1))) / @num / (@gridWidth / 100)) * 1%;
+}
+
+.columns(@factor, @num) {
+	width: (((@gridWidth - (@gridGutterWidth * (@num - 1))) / @num / (@gridWidth / 100)) * @factor) + ((@gridGutterWidth / (@gridWidth / 100)) * (@factor - 1)) * 1%;
+}
+
+.column-push(@num) {
+	left: (((@gridWidth - (@gridGutterWidth * (@num - 1))) / @num / (@gridWidth / 100)) + @gridGutterWidth/(@gridWidth/100)) * 1%;
+}
+
+.columns-push(@factor, @num) {
+	left: ((((@gridWidth - (@gridGutterWidth * (@num - 1))) / @num / (@gridWidth / 100)) * @factor) + ((@gridGutterWidth / (@gridWidth / 100)) * (@factor - 1)) + @gridGutterWidth/(@gridWidth/100)) * 1%;
+}
+
+
+
+
+
+
+//============================================================
+//
+// linear-gradient
+//
+// @param dir : top, left, 90deg
+// @param start-color : #000, rgba(255,255,255,0.5)
+// @param end-color : #000, rgba(255,255,255,0.5)
+//
+// NOTE: The direction for the IE gradient is automagically
+// worked out for you based either on the direction or the
+// angle that you pass in. Obviously it will only be a
+// horizontal or vertical gradient, but it's still awesome.
+//
+// ALSO: Support for rgba is covered in IE too. Values are
+// converted to aRGB.
+//
+// @example .linear-gradient(50deg, #eee, #aaa); (IE auto included)
+//
+// OR
+//
+// @example .linear-gradient-multi(~'top, #eee 0%, #aaa 50%, #eee 100%');
+// .linear-gradient-ie(top, #eee, #aaa);
+//
+//
+// @see http://dev.w3.org/csswg/css3-images/#linear-gradients
+//
+//============================================================
+ 
+.linear-gradient( @dir: top, @start-color: #eee, @end-color: #aaa ) {
+background: -webkit-linear-gradient(@dir, @start-color 0%, @end-color 100%);
+background: -moz-linear-gradient(@dir, @start-color 0%, @end-color 100%);
+background: -ms-linear-gradient(@dir, @start-color 0%, @end-color 100%);
+background: -o-linear-gradient(@dir, @start-color 0%, @end-color 100%);
+background: linear-gradient(@dir, @start-color 0%, @end-color 100%);
+.linear-gradient-ie( @dir, @start-color, @end-color);
+}
+ 
+.linear-gradient-multi( ... ) {
+background-image: -webkit-linear-gradient(@arguments);
+background-image: -moz-linear-gradient(@arguments);
+background-image: -ms-linear-gradient(@arguments);
+background-image: -o-linear-gradient(@arguments);
+background-image: linear-gradient(@arguments);
+}
+ 
+.linear-gradient-ie( @dir, @start-color, @end-color) when (@dir = top),
+not ( isstring(@dir) ) and ( @dir >= 225 ) and ( @dir < 315 ),
+not ( isstring(@dir) ) and ( @dir >= -135 ) and ( @dir < -45 ) {
+.linear-gradient-ie-filter(@start-color, @end-color, 0);
+}
+.linear-gradient-ie( @dir, @start-color, @end-color) when (@dir = right),
+not ( isstring(@dir) ) and ( @dir >= 135 ) and ( @dir < 225 ),
+not ( isstring(@dir) ) and ( @dir >= -225 ) and ( @dir < -135 ) {
+.linear-gradient-ie-filter(@end-color, @start-color, 1);
+}
+.linear-gradient-ie( @dir, @start-color, @end-color) when (@dir = bottom),
+not ( isstring(@dir) ) and ( @dir >= 45 ) and ( @dir < 135 ),
+not ( isstring(@dir) ) and ( @dir >= -315 ) and ( @dir < -225 ) {
+.linear-gradient-ie-filter(@end-color, @start-color, 0);
+}
+.linear-gradient-ie( @dir, @start-color, @end-color) when (@dir = left),
+not ( isstring(@dir) ) and ( @dir >= 315 ) and ( @dir < 360 ),
+not ( isstring(@dir) ) and ( @dir >= -45 ) and ( @dir < 45 ),
+not ( isstring(@dir) ) and ( @dir < -315 ) and ( @dir >= -360 ) {
+.linear-gradient-ie-filter(@start-color, @end-color, 1);
+}
+ 
+.linear-gradient-ie-filter(@start: #eee, @end: #aaa, @type: 1) {
+@c-start: argb(@start);
+@c-end: argb(@end);
+filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr='@{c-start}', endColorstr='@{c-end}', GradientType=@{type})";
+-ms-filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr='@{c-start}',endColorstr='@{c-end}',GradientType=@{type})";
+}

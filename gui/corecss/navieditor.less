@@ -1,0 +1,158 @@
+.naviitems-listing{
+	display:block;
+	padding:0 20px 20px;
+}
+.sortable { 
+  position: relative; 
+  width:100%; 
+  z-index: 1;
+	margin:0;
+	padding:0;
+}
+.template { display: none; }
+.sortable li { position: relative; }
+.sortable li:before,
+.sortable li:after {
+  opacity: 0;
+  position: absolute;
+	.transition(opacity 0.25s);
+  z-index: 10;
+}
+.sortable li:before {
+  content: '#' attr(id);
+  display: block;
+  font-size:12px;
+  right: 70px;
+  top: 5px;
+	padding:2px 5px;
+	border:1px (@mnColor - #111) solid;
+	.gradient(lighten(@mnColor,5%),@mnColor);
+	color:lighten(@mnColor,45%);
+}
+.sortable li:hover:before,
+.sortable li:hover:after{ opacity: 1; }
+
+.sortable div {
+		text-decoration: none;
+		color:@mnColor;
+		border-bottom-color: darken(#fff, 30);
+		border-radius: 4px;
+		border: 1px solid #bbbbbb;
+		font-family: @buttonFontFamily;
+		font-size:@mnfSize - 1px;
+		.gradient(@grdTopColor,@grdBotColor);
+		background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAoCAYAAAAPOoFWAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAPZJREFUeNq81tsOgjAMANB2ov7/7ypaN7IlIwi9rGuT8QSc9EIDAsAznxvY4pXPKr05RUE5MEVB+TyWfCEl9LZApYopCmo9C4FKSMtYoI8Bwv79aQJU4l6hXXCZrQbokJEksxHo9KMOgc6w1atHXM8K9DVC7FQnJ0i8iK3QooGgbnyKgMDygBWyYFZoqx4qS27KqLZJjA1D0jK6QJcYEQEiWv9PGkTsbqxQ8oT+ZtZB6AkdsJnQDnMoHXHLGKOgDYuCWmYhEERCI5gaamW0bnHdA3k2ltlIN+2qKRyCND0bhqSYCyTB3CAOc4WusBEIpkeBuPgJMAAX8Hs1NfqHRgAAAABJRU5ErkJggg==') repeat-x left top;
+		text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
+		box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.1);
+		.box-sizing(border-box);
+	
+		display: block;
+		height: 40px;
+		margin: 5px 0;
+  	padding: 5px 5px 5px 30px;
+		position: relative;
+		.transition(all 0.2s);
+}
+.sortable div:active { cursor: move;/* url(http://attorneywebsolutions.com/public/images/move.png),move;*/ }
+.colorFlash > div:before {
+  content:'';
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+	z-index:1000;
+	-webkit-animation: colorFlash 1s ease-out;
+	-moz-animation:    colorFlash 1s ease-out;
+	-ms-animation:     colorFlash 1s ease-out;
+	animation:     colorFlash 1s ease-out;
+ }
+
+.menu-icon-panel{
+  cursor: pointer;
+  position: absolute;
+  font-size:14px;
+	height:20px;
+	width:20px;
+	border-radius: 4px;
+	top:9px;
+	text-align:center;
+	line-height:16px;
+}
+
+.remove_panel {
+  right:9px;
+	color:darken(@fstRed, 18);
+	&:hover{
+		color: darken(@fstRed, 25);
+	}
+}
+.edit_panel {
+  right:40px;
+	color: darken(@colorGreen, 18);
+	&:hover{
+		color: darken(@colorGreen, 25);
+	}
+}
+
+.sortable li.fastmenu-nestedSortable-collapsed > ol {
+	display: none;
+}
+
+.fastmenu-nestedSortable-branch > div > .disclose > span:before{
+	font-family:FontAwesome;font-style:normal;font-weight:normal;line-height:1;-webkit-font-smoothing:antialiased;
+  cursor: pointer;
+  left: 7px;
+  position: absolute;
+	color:@mnColor;
+	font-size:14px;
+	height:20px;
+	width:20px;
+	top:10px;
+	text-align:center;
+	line-height:20px;
+}
+
+.fastmenu-nestedSortable-branch.fastmenu-nestedSortable-expanded  > div > .disclose > span:before{
+		content:"\f068";
+}
+.fastmenu-nestedSortable-branch.fastmenu-nestedSortable-collapsed  > div > .disclose > span:before{
+		content:"\f067";
+}
+
+	
+
+
+.ui-sortable-placeholder { 
+  border: 1px dashed @mnColor;
+	height:40px;
+  visibility: visible !important;
+}
+
+
+#propBox {
+  z-index: 2;
+}
+
+#close_propBox {
+}
+#remove_panel { display: none; position:absolute; right:5px }
+#controls {
+  padding:0;
+}
+
+
+@-webkit-keyframes colorFlash {
+  0% { background-color: #0f5; box-shadow: 0 0 10px green; }
+  100% { background-color: transparent; box-shadow: 0 0 0 green; } }
+@keyframes colorFlash {
+  0% { background-color: #0f5; box-shadow: 0 0 10px green; }
+  100% { background-color: transparent; box-shadow: 0 0 0 green; } }
+@-moz-keyframes colorFlash {
+  0% { background-color: #0f5; box-shadow: 0 0 10px green; }
+  100% { background-color: transparent; box-shadow: 0 0 0 green; } }
+
+
+
+

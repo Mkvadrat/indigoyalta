@@ -1,0 +1,779 @@
+@import "reset.less";
+@import "variables.less";
+@import "mixins.less";
+@import "typo.less";
+@import "code.less";
+@import "tables.less";
+@import "lists.less";
+@import "forms.less";
+@import "colors.less";
+@import "labels.less";
+@import "buttons.less";
+@import "helpers.less";
+@import "images.less";
+@import "navs.less";
+@import "messages.less";
+@import "grid.less";
+@import "blocks.less";
+@import "users.less";
+@import "responsive-utils.less";
+@import "responsive-media.less";
+@import "responsive-grid.less";
+@import "responsive-blocks.less";
+@import "responsive-navs.less";
+@import "responsive-forms.less";
+@import "fasteditor.less";
+@import "upload.less";
+@import "navieditor.less";
+@import "fastnotify.less";
+
+/* =Typography
+-----------------------------------------------------------------------------*/
+html, body{
+	height:100%;
+}
+body{
+	position:relative;
+}
+.auth-page{
+	background:@baseColor;
+}
+.login-page .wrapper{
+	background:#222830 url(/gui/coreimages/bg_login.png) !important;
+}
+
+.login-page fieldset{
+	background:@baseColor;
+	.blockMultiplicator()
+}
+
+
+.login-container{
+	width:500px;
+	margin:150px auto 0; 
+}
+
+.login-form{
+
+	input[type="text"],
+	input[type="password"]{
+		padding:5px;
+	}
+}
+.toolbal-group{
+	vertical-align:top;
+}
+.clear{
+	clear:both;
+}
+.itemsGroup{
+	zoom: 1;		
+	&:before, &:after {
+		content: '';
+		display: table;
+	}
+		
+	&:after {
+		clear:both;
+	}
+}		
+.more-space{
+	padding:10px;
+}
+
+a.btn-iconed{
+	
+	i{
+		font-size:14px;
+	}
+
+}
+
+input[type="submit"].btn-iconed{
+
+}
+
+
+a{
+	text-decoration:none ;
+	&:hover{
+		text-decoration:none !important;
+	}
+}
+
+/* =Links
+-----------------------------------------------------------------------------*/
+
+
+/* =Layout
+-----------------------------------------------------------------------------*/
+.body-wrapper{
+	display:table;
+	height:100%;
+	min-height:100%;
+	width:100%;
+}
+#sidenavi{
+	display:table-cell;
+	height:100%;
+	min-height:100%;
+	width:250px;
+	background:@mnColor;
+	vertical-align:top;
+}
+
+.cms-logo{
+	display:block;
+	padding:0 5px;
+	height:63px;
+	display:block;
+	.itemsGroup;
+		a{
+			font-size:@mnfSize*2 + 0px;
+			text-decoration:none;
+			line-height:@mnfSize + 10px;
+			color: #E6E9ED;
+			.s-2{
+				color:lighten(@mnColor, 20%);
+				font-size:@mnfSize*2 + 5px;
+			}
+				
+		}
+		span{
+			display:inline-block;
+			vertical-align:middle;
+		}
+	}
+		
+.main-navigation{
+	display:block;
+	padding:0;
+	margin:0;
+	
+	a{
+		text-decoration:none;
+	}
+	
+	.first-level{
+		display:block;
+		border-top:1px (@mnColor + #111) solid;
+		border-bottom:1px (@mnColor - #111) solid;
+		border-left:1px @mnColor solid;
+		.itemsGroup;
+		i{
+			display:block;
+			padding:10px 8px 0;
+			color:lighten(@mnColor, 20%);
+			font-size:@mnfSize + 0px;
+			float:left;
+		}
+		> a{
+			display:block;
+			padding:5px;
+			font-size:@mnfSize + 0px;
+			color:lighten(@mnColor,45%);
+			
+			&:after{
+				display:block;font-family:FontAwesome;font-style:normal;font-weight:normal;line-height:1;-webkit-font-smoothing:antialiased;
+				content:"\f0da";
+				float:right;
+				.gradient(lighten(@mnColor,5%),@mnColor);
+				color:lighten(@mnColor,45%);
+				border:1px (@mnColor - #111) solid;
+				width:16px;
+				height:15px;
+				padding:2px 0 0 1px;
+				border-radius:50%;
+				margin:2px 0 0;
+				text-align:center;
+			}
+		}
+		&.parent{
+			> a{
+				&:after{
+				content:"\f0da";
+				}
+			}
+			.nested{
+			}
+		}
+		&:hover, &.open{
+			> a{
+				color:lighten(@mnColor, 70%);
+				.gradient(lighten(@mnColor,5%),@mnColor);
+				&:after{
+					content:"\f0d7";
+					background:darken(@mnColor, 5%);
+					color:lighten(@mnColor,35%);
+					border:1px (@mnColor - #111) solid;
+					.box-shadow(0 0px 4px fade(@mnColor, 30));
+				}
+			}
+			i{
+				color:@mnIcon;
+				.text-shadow(0 1px 3px rgba(0, 0, 0, 1));
+			}	
+		}
+		&.open{
+
+			.nested{
+			}
+
+		}
+	}
+	.icon-blue{
+		border-left:1px @colorBlue solid;
+		i{
+			color:@colorBlue !important;
+		}
+		
+	}
+	.icon-aqua{
+		border-left:1px #4FC1E9 solid;
+		i{
+			color:#4FC1E9 !important;
+		}
+	}
+	.icon-lavender{
+		border-left:1px #967ADC solid;
+		i{
+			color:#967ADC !important;
+		}
+	}
+	.icon-mint{
+		border-left:1px #16a085 solid;
+		i{
+			color:#16a085 !important;
+		}
+	}
+	.icon-sunflower{
+		border-left:1px #FFCE54 solid;
+		i{
+			color:#FFCE54 !important;
+		}
+	}
+	.icon-grapefruit{
+		border-left:1px #ED5565 solid;
+		i{
+			color:#ED5565 !important;
+		}
+	}
+	.icon-green{
+		border-left:1px @colorGreen solid;
+		i{
+			color:@colorGreen !important;
+		}
+	}
+	.icon-orange{
+		border-left:1px @colorOrange solid;
+		i{
+			color:@colorOrange !important;
+		}
+	}
+	
+	.nested{
+		padding:10px 0;
+		margin:0;
+		clear:both;
+		background:darken(@mnColor, 3%);
+		border-top:1px (@mnColor - #111) solid;
+		
+		.second-level{
+			a{
+				padding:5px;
+				font-size:@mnfSize - 2px;
+				color:lighten(@mnColor, 30%);
+				
+				&:before{
+					display:inline-block;font-family:FontAwesome;font-style:normal;font-weight:normal;line-height:1;-webkit-font-smoothing:antialiased;
+					content:"\f0da";
+					padding:5px;
+					font-size:@mnfSize + 0px;
+				}
+			}
+			
+		&:hover, &.active{
+			> a{
+				color:lighten(@mnColor, 60%);
+			}
+			i{
+				color:spin(@mnColor, 180);
+			}	
+		}
+		}
+
+
+
+		
+		}
+	.separator-menu{
+		display:block;
+		height:10px;
+	}	
+
+}
+
+#pagewrapper{
+	display:table-cell;
+	height:100%;
+	min-height:100%;
+	background:@baseColor;
+	vertical-align:top;
+}
+.control-wrapper{
+	padding:5px 5px 25px;
+	width:100%;
+	.box-sizing(border-box);
+	}
+	
+	.head-block{
+		padding:0 0 5px;
+		.head-hgroup{
+			padding:5px;
+		}
+	}
+	.well-co1ntainer{
+		background:fade(@mnColor, 3%);
+		border:1px fade(@mnColor, 7%) solid;
+		.border-radius(4px);
+	}
+	
+	.records-list-table{
+	
+	
+	}
+
+		.edit-form-navigation{
+			
+		}
+		.form-tab{
+			
+			.fields-container{
+				
+				> .units-row-end{
+					padding:5px 0;
+					border-bottom: 1px dotted #ddd;
+					margin-bottom:5px;
+				}
+			}
+		}
+		.tabbed-items{
+			padding:10px 5px 10px 10px;
+			background:#fff;
+			border: 1px solid @colorGrayLight;
+			.blockMultiplicator();
+		}
+
+	
+	
+	
+	
+/* =Header
+-----------------------------------------------------------------------------*/
+.component-date-group{
+	position:relative;
+
+	input{
+		float:left;
+				&:after{
+					display:inline-block;font-family:FontAwesome;font-style:normal;font-weight:normal;line-height:1;-webkit-font-smoothing:antialiased;
+					content:"\f073";
+					padding:5px;
+					font-size:@mnfSize + 0px;
+				}
+	}
+	span{
+		float:left
+	}
+
+	}
+.component-time-group{
+	position:relative;
+
+	input{
+		float:left;
+	}
+	span{
+		float:left
+	}
+
+	}
+
+/* =Nav
+-----------------------------------------------------------------------------*/
+
+/* =Misc
+-----------------------------------------------------------------------------*/
+/*!
+ * Timepicker Component for Twitter Bootstrap
+ *
+ * Copyright 2013 Joris de Wit
+ *
+ * Contributors https://github.com/jdewit/bootstrap-timepicker/graphs/contributors
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+.bootstrap-timepicker {
+    position: absolute;
+		top:0;
+    &.pull-right {
+        .bootstrap-timepicker-widget {
+            &.dropdown-menu {
+                left: auto;
+                right: 0;
+
+                &:before {
+                    left: auto;
+                    right: 12px;
+                }
+                &:after {
+                    left: auto;
+                    right: 13px;
+                }
+            }
+        }
+    }
+
+    .add-on {
+        cursor: pointer;
+        i {
+           display: inline-block;
+           width: 16px;
+           height: 16px;
+        }
+    }
+}
+.bootstrap-timepicker-widget {
+	position: absolute;
+	z-index:100;
+		left:10px;
+
+	border:5px fade(@mnColor, 50%) solid;
+	background:@baseColor;
+        padding: 4px;
+	.border-radius(4px);
+   &.dropdown-menu {
+        &.open {
+            display: inline-block;
+        }
+    }
+    &.timepicker-orient-left {
+        &:before {
+           left: 6px;
+        }
+        &:after {
+           left: 7px;
+        }
+    }
+    &.timepicker-orient-right {
+        &:before {
+           right: 6px;
+        }
+        &:after {
+           right: 7px;
+        }
+    }
+    &.timepicker-orient-top {
+        &:before {
+           top: -7px;
+        }
+        &:after {
+            top: -6px;
+        }
+    }
+    &.timepicker-orient-bottom {
+        &:before {
+            bottom: -7px;
+            border-bottom: 0;
+            border-top: 7px solid #999;
+        }
+        &:after {
+            bottom: -6px;
+            border-bottom: 0;
+            border-top: 6px solid #ffffff;
+        }
+    }
+    a.btn, input {
+        border-radius: 4px;
+    }
+
+    table {
+        width: 100%;
+        margin: 0;
+
+        td {
+            text-align: center;
+            height: 24px;
+            margin: 0;
+            padding: 2px;
+
+            &:not(.separator) {
+                min-width: 30px;
+            }
+
+            span {
+                width: 100%;
+            }
+            a {
+                border: 1px transparent solid;
+                width: 100%;
+                display: inline-block;
+                margin: 0;
+                padding: 4px 0;
+                outline: 0;
+                color: #333;
+
+                &:hover {
+                    text-decoration: none;
+                    background-color: #eee;
+                    -webkit-border-radius: 4px;
+                    -moz-border-radius: 4px;
+                    border-radius: 4px;
+                    border-color: #ddd;
+                }
+
+                i {
+                    margin-top: 2px;
+                    font-size: 18px;
+                }
+            }
+            input {
+                width: 25px;
+                margin: 0;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.bootstrap-timepicker-widget .modal-content {
+    padding: 4px;
+}
+
+@media (min-width: 767px) {
+    .bootstrap-timepicker-widget.modal {
+        width: 200px;
+        margin-left: -100px;
+    }
+}
+
+@media (max-width: 767px) {
+    .bootstrap-timepicker {
+        width: 100%;
+
+        .dropdown-menu {
+            width: 100%;
+        }
+    }
+}
+
+/*!
+ * Datepicker for Bootstrap
+ *
+ * Copyright 2012 Stefan Petre
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ */
+ 
+.datepicker {
+	position:absolute;
+	padding: 4px;
+	left:10px;
+	margin-top: 1px;
+	z-index:100;
+	border:5px fade(@mnColor, 50%) solid;
+	background:@baseColor;
+	.border-radius(4px);
+	display:none;
+	>div {
+		display: none;
+	}
+	table{
+		width: 100%;
+		margin: 0;
+	}
+	.table-condensed th,
+	.table-condensed td {
+		padding: 2px 5px;
+	}
+	td,
+	th{
+		text-align: center;
+		width: 12px;
+		height: 12px;
+		.border-radius(4px);
+	}
+	td {
+		&.day:hover {
+			color: lighten(@mnColor, 50%);
+			background: @mnColor;
+			cursor: pointer;
+		}
+		&.day.disabled {
+			color: @colorGrayLight;
+		}
+		&.old,
+		&.new {
+			color: lighten(@mnColor, 50%);
+		}
+		&.active,
+		&.active:hover {
+			background:@mnColor;
+			color: #fff;
+			text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+		}
+		span {
+			display: block;
+			width: 50px;
+			height: 40px;
+			line-height: 40px;
+			float: left;
+			margin: 2px;
+			cursor: pointer;
+			.border-radius(4px);
+			&:hover {
+			}
+			&.active {
+				color: #fff;
+				background:@mnColor;
+				text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+			}
+			&.old {
+				color: lighten(@mnColor, 50%);
+				
+			}
+		}
+	}
+	
+	th {
+		&.switch {
+			width: 120px;
+		}
+		&.next,
+		&.prev {
+			font-size: @baseFontSize;
+		}
+	}
+	
+	thead tr:first-child th {
+			background:@mnColor;
+	}
+	thead tr:first-child{
+			background:@mnColor;
+			color: @colorWhite;
+	}
+	/*.dow {
+		border-top: 1px solid #ddd !important;
+	}*/
+}
+.input-append,
+.input-prepend {
+	&.date {
+		.add-on i {
+			display: block;
+			cursor: pointer;
+			width: 16px;
+			height: 16px;
+		}
+	}
+}
+
+
+.headblock-icon{
+	display:block;
+	width:44px;
+	height:44px;
+	position:absolute;
+	top: 7px;
+	z-index:5;
+	margin-left:3px;
+	text-align:center;
+	i{
+		display:inline-block;
+		vertical-align:middle;
+		color:fade(@mnColor, 40%);
+		text-shadow:0 1px 1px fade(@mnColor, 20%);
+	}
+	i.color-blue{
+		color:@colorBlue;
+	}
+	i.color-aqua{
+		color:#4FC1E9;
+	}
+	i.color-lavender{
+			color:#967ADC !important;
+	}
+	i.color-mint{
+			color:#16a085 !important;
+	}
+	i.color-sunflower{
+			color:#FFCE54 !important;
+	}
+	i.color-grapefruit{
+			color:#ED5565 !important;
+	}
+	i.color-green{
+			color:@colorGreen !important;
+	}
+	i.color-orange{
+			color:@colorOrange !important;
+	}
+	span{
+		display:table-cell;
+		height:44px;
+		width:44px;
+		vertical-align:middle;
+		text-align:center;
+	}
+}
+.head-hgroup{
+	position:relative;
+	margin-left:45px;
+	h3{
+		color:fade(@mnColor, 80%);
+		text-shadow:0 1px 2px fade(@mnColor, 40%);
+	}
+	h3.subheader{
+		color:fade(@mnColor, 40%);
+		text-shadow:none;
+	}
+}
+.restricted-access{
+	.headblock-icon{
+		color:#F00;
+	}
+
+}
+
+.head-hgroup .fa-plus-circle{
+	color:darken(@colorGreen, 25%);
+}	
+
+.records-list-bottom{
+	padding:20px 0 10px;
+}
+
+.current-location{
+  position: relative;
+  padding:7px;
+  border-top: 1px solid #f7dc7d;
+  border-bottom: 1px solid #f7dc7d;
+  margin: 0 -5px  10px -10px;
+  color: #9f7d09;
+  background-color: #fff6d5;
+}
+
+.request-contacts{
+	display:block;
+	padding:0 0 5px;
+	border-bottom:1px @colorGrayLight dotted;
+	margin:0 0 2px;
+}
+
+.mandatory-container{
+	.forms-desc{
+		color:@colorRed;
+	}
+}

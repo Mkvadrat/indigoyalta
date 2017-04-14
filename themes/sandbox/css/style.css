@@ -1,0 +1,49 @@
+a:link, a:visited {
+	color:#555;
+}
+#wrapper {
+	width:80%;
+	margin:40px auto;
+}
+.logo {
+	margin:50px auto;
+	font-family:'Georgia';
+	font-size: 35px;
+	color:#000;
+}
+	.logo a {
+		color:#000;
+		text-decoration:none;
+	}
+nav {
+	margin:0 0 20px 0;
+}
+nav ul li {
+	display:inline;
+	padding-right:20px;
+	text-align:center;
+	font-size:18px;
+}
+footer {
+	margin-top:40px;
+}
+div.breadcrumbs {
+	display:inline;
+	margin-right:15px;
+}
+
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+h1, h2 {
+	font-weight:normal;
+}
+input[type="text"], textarea {
+	width:300px;
+	padding:6px;
+	border:1px dotted #AAA;
+	margin:5px 0;
+}

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<content>
+	<name>Users</name>
+	<descriptions label="Users" new="New user"/>
+	<table key="id_user" production="users" />
+	<fieldset name="Основные данные" icon="tasks">
+		<field id="id_user" column="true">
+			<type>hidden</type>
+			<list>true</list>
+			<admin>true</admin>
+		</field>
+		<field id="username" column="true" link="edit">
+			<description>Логин</description>
+			<type>text</type>
+			<admin>true</admin>
+			<list>true</list>
+			<rules>required</rules>
+		</field>
+		<field id="email" column="true">
+			<description>E-mail</description>
+			<type>text</type>
+			<admin>true</admin>
+			<list>true</list>
+			<rules>required|valid_email</rules>
+		</field>
+		<field id="password" column="true">
+			<description>Пароль</description>
+			<type>password</type>
+		</field>
+		<field id="password_confirm">
+			<description>Подтверждение пароля</description>
+			<type>password</type>
+			<rules>matches[password]</rules>
+		</field>
+		<field id="name" column="true">
+			<description>Имя</description>
+			<type>text</type>
+			<admin>true</admin>
+			<list>true</list>
+			<rules>required</rules>
+		</field>
+		<field id="surname" column="true">
+			<description>Фамилия</description>
+			<type>text</type>
+			<admin>true</admin>
+			<list>true</list>
+			<rules>required</rules>
+		</field>
+		<field id="admin_lang" column="true">
+			<description>Admin language</description>
+			<type>hidden</type>
+			<admin>true</admin>
+			<options>
+				<custom>config_item('languages_select')</custom>
+			</options>
+			<default>eval:$this->lang->current_language</default>
+		</field>
+	</fieldset>
+	<fieldset name="Доступ" icon="shield">
+		<field id="id_group" column="true">
+			<description>Группа доступа</description>
+			<type>radio</type>
+			<sql cache="true">
+				<select>id_group as value, group_name as name</select>
+				<from>groups</from>
+			</sql>
+			<default>1</default>
+		</field>
+	</fieldset>
+</content>

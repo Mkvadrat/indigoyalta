@@ -1,0 +1,312 @@
+# The content type unique ID
+# This number must match the one on the database
+id  : {id}
+
+# The content type unique name
+name: "{name}"
+
+# Labels and description used on the administration
+descriptions:
+	full_name  : "{description}"
+	new_record : "{label_new}"
+
+# Pages must use "true" (aka "tree structure"), while simple contents uses "false"
+tree: true
+
+# The tables (and the primary key) used to save the records
+table:
+	stage       : records_stage
+	production  : records
+	primary_key : id_record
+
+# The order used on the administration lists
+order_by:
+	field : date_update
+	sort  : DESC
+
+# Whether categories and hierarchies should be enabled for this content type
+categories  : false
+hierarchies : false
+
+# Tree structured content types can have a parent record. Here you define the accepted types.
+# You should include at least the current content type.
+parents :
+	- "{name}"
+
+# Content type relations
+relations :
+
+	# This is the relation name
+    childs :
+        type : 1-n
+        with : "{name}"
+        from : id_record
+        to   : id_parent
+
+# Content type triggers
+triggers :
+
+	# This trigger, recounts the childs of each record
+    - on    : "insert, update, delete"
+      field : id_parent
+      sql   :
+          action : recount
+          type   : "{name}"
+          target : child_count
+
+# Here you can see another example of trigger
+#   - on   : "publish"
+#     call : action_name
+
+
+# Here starts the fieldsets
+fieldsets :
+
+	- name   : General informations
+	  icon   : tasks
+	  fields :
+
+	  	# Every record should have a unique id
+	  	# You can change the name if you are using a custom primary key
+	  	id_record :
+	  		column : true
+	  		kind   : numeric
+	  		type   : hidden
+	  		list   : true
+	  		admin  : true
+
+	  	# This field is required to bind records to the owner content type
+	  	# You don't need to provide the default value, the system will automatically recognize it
+	  	id_type :
+	  		column  : true
+	  		kind    : numeric
+	  		type    : hidden
+	  		list    : true
+
+	  	# Yes, each record should have a title
+	  	title :
+	  		column      : true
+	  		link        : edit
+	  		description : Заголовок
+	  		mandatory   : true
+	  		additionaldesc   	: обязательное к заполнению поле. максимум 155 символов.
+	  		rules       : required|min_length[5]|max_length[155]
+	  		type        : text
+	  		admin       : true
+	  		list        : true
+
+	  	# This field is required on this content type, because is "Tree structured" and each record can have a parent record
+	  	id_parent :
+	  		column  : true
+	  		description : Родительская
+	  		kind    : numeric
+	  		type    : select
+	  		list    : true
+	  		options :
+	  		    custom : $this->view->get('parent_tree');
+
+	  	date_insert :
+	  		column  : true
+	  		kind    : numeric
+	  		type    : hidden
+	  		list    : true
+	  		default : eval:time()
+
+	  	date_publish :
+	  		column  : true
+	  		kind    : numeric
+	  		type    : hidden
+	  		list    : true
+	  		default : eval:time()
+
+	  	published :
+	  		column  : true
+	  		kind    : numeric
+	  		type    : hidden
+	  		list    : true
+	  		default : 0
+	  		length  : 1
+
+	  	# Every record should have a slug, and this will be used in the url to reach the record
+	  	# If blank, will be automatically set with the content of the "title" field
+	  	uri :
+	  		column      : true
+	  		description : Ссылка ЧПУ
+	  		admin       : true
+	  		type        : text
+	  		list        : true
+
+	  	show_in_menu :
+	  		column : true
+	  		description : Доступна к просмотру
+	  		type        : radio
+	  		rules       : required|trim|required|maxlength[1]|xss_clean
+	  		mandatory   : true
+	  		additionaldesc   	: обязательное поле. опеределяет статус видимости страницы на фронтальной части сайта
+	  		list        : true
+	  		default     : F
+	  		length      : 1
+	  		options     :
+	  		    T : Да, везде
+	  		    S : Нет, только в карте сайта
+	  		    F : Скрыть вообще
+
+	  	# If your website is multilanguage, this field is required
+	  	lang :
+	  		column      : true
+	  		type        : hidden
+	  		list        : true
+	  		default     : ru
+	  		length      : 2
+
+	  	content :
+	  		description : Полный текст
+	  		type        : textarea_full
+	  		list        : false
+		
+	  	child_count :
+	  		column       : true
+	  		kind         : numeric
+	  		description  : Дочерних
+	  		type         : hidden
+	  		list         : true
+	  		admin        : true
+	  		default      : 0
+	  		length       : 5
+
+
+	- name   : Настройки страницы
+	  icon   : wrench
+	  fields :
+
+	  	view_template : 
+	  		description : Шаблон
+	  		type        : select
+	  		rules       : required
+	  		admin       : false
+	  		list        : true
+	  		default     : default
+	  		options     :
+	  			default			: По умолчанию
+	  			homepage		: Главная
+	  			archivepage		: Архив
+	  			feedback		: Контакты
+
+	  	view_css :
+	  		description : CSS Stylesheet
+	  		type        : textarea_code
+
+	  	view_js :
+	  		description : Javascript code
+	  		type        : textarea_code
+
+
+	  	action :
+	  		description : Показывать на странице
+	  		type        : select
+	  		onchange    : fastcms.actions.record_act() # Javascript
+	  		options     :
+	  			text    : Текст
+	  			list    : Каталог раздела
+	  			action  : Запустить приложение
+	  			link    : Редирект
+
+	  	action_list_type :
+	  		description : Раздел для вывода
+	  		visible     : false
+	  		type        : select
+	  		sql         :
+	  			cache    : true
+	  			select   : "id_type AS value, title"
+	  			from     : types
+	  			order_by : title ASC
+
+	  	action_list_categories :
+	  		description : "Категории раздела"
+	  		visible     : false
+	  		type        : text
+
+	  	action_list_hierarchies :
+	  		description : "Добавить перелинковку (A, B, C)"
+	  		visible     : false
+	  		type        : hierarchy
+
+	  	action_list_where :
+	  		description : "SQL WHERE (Условие)"
+	  		visible     : false
+	  		type        : text
+
+	  	action_list_limit :
+	  		description : Результатов на страницу
+	  		visible     : false
+	  		type        : number
+
+	  	action_list_order_by :
+	  		description : Сортировка
+	  		visible     : false
+	  		type        : select
+	  		options     :
+	  			"id_record DESC"    : "По ID (вниз)"
+	  			"id_record ASC"     : "По ID (вверх)"
+	  			"date_publish DESC" : "Дата публикации (вниз)"
+	  			"date_publish ASC"  : "Дата публикации (вверх)"
+
+	  	action_list_has_feed :
+	  		description : RSS/JSON
+	  		visible     : false
+	  		type        : select
+	  		options     :
+	  			T : Да
+	  			F : Нет
+
+	  	action_custom_name :
+	  		description : Название приложения
+	  		visible     : false
+	  		type        : text
+
+	  	action_custom_mode :
+	  		description : Запуск приложения
+	  		visible     : false
+	  		type        : select
+	  		options     :
+	  			D : До генерации шаблона
+	  			C : Во время генерации шаблона
+
+	  	action_link_url :
+	  		description : Ссылка для редиректа
+	  		visible     : false
+	  		type        : text
+
+
+	  	priority :
+	  		column      : true
+	  		kind        : numeric
+	  		description : Приоритет
+	  		type        : number
+	  		admin       : true
+	  		default     : 0
+	  		length      : 3
+
+	  	page_cache :
+	  		description : Кешировать (в минутах, 0 - вечно)
+	  		type        : number
+	  		default     : 0
+
+
+	- name   : SEO
+	  icon   : tags
+	  fields :
+
+	  	meta_h1 :
+	  		description : HTML-тег "H1"
+	  		type        : text
+	  	meta_title :
+	  		description : HTML-тег "Title"
+	  		type        : text
+	  	meta_keywords :
+	  		description : Мета-тег "Keywords"
+	  		type        : text
+	  	meta_description :
+	  		description : Мета-тег "Описание"
+	  		type        : textarea_code
+

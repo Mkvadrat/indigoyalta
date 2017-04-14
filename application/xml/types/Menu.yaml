@@ -1,0 +1,449 @@
+# ----- content type declarations starts here below -----
+
+# The content type unique ID
+# This number must match the one on the database
+id  : 1
+
+# The content type unique name
+name: "Menu"
+
+# Labels and description used on the administration
+descriptions:
+	full_name  : "Страницы"
+	new_record : "Новая страница"
+
+# Pages must use "true" (aka "tree structure"), while simple contents uses "false"
+tree: true
+
+# The tables (and the primary key) used to save the records
+table:
+	stage       : records_stage
+	production  : records
+	primary_key : id_record
+
+# The order used on the administration lists
+order_by:
+	field : id_record
+	sort  : DESC
+
+# Whether categories and hierarchies should be enabled for this content type
+categories  : false
+hierarchies : false
+
+# Tree structured content types can have a parent record. Here you define the accepted types.
+# You should include at least the current content type.
+parents :
+	- "Menu"
+
+# Content type relations
+relations :
+
+	# This is the relation name
+    childs :
+        type : 1-n
+        with : "Menu"
+        from : id_record
+        to   : id_parent
+
+# Content type triggers
+triggers :
+
+	# This trigger, recounts the childs of each record
+    - on    : "insert, update, delete"
+      field : id_parent
+      sql   :
+          action : recount
+          type   : "Menu"
+          target : child_count
+
+# Here you can see another example of trigger
+#   - on   : "publish"
+#     call : action_name
+
+
+# Here starts the fieldsets
+fieldsets :
+
+	- name   : General informations
+	  icon   : tasks
+	  fields :
+
+	  	# Every record should have a unique id
+	  	# You can change the name if you are using a custom primary key
+	  	id_record :
+	  		column : true
+	  		kind   : numeric
+	  		type   : hidden
+	  		list   : true
+	  		admin  : true
+
+	  	# This field is required to bind records to the owner content type
+	  	# You don't need to provide the default value, the system will automatically recognize it
+	  	id_type :
+	  		column  : true
+	  		kind    : numeric
+	  		type    : hidden
+	  		list    : true
+
+	  	# This field is required on this content type, because is "Tree structured" and each record can have a parent record
+	  	id_parent :
+	  		column  : true
+	  		description : Родительская
+	  		kind    : numeric
+	  		type    : select
+	  		list    : true
+	  		options :
+	  		    custom : $this->view->get('parent_tree');
+
+	  	date_insert :
+	  		column  : true
+	  		kind    : numeric
+	  		type    : hidden
+	  		list    : true
+	  		default : eval:time()
+
+	  	date_publish :
+	  		column      : true
+	  		description : Дата публикации
+	  		type        : datetime
+
+	  	published :
+	  		column  : true
+	  		kind    : numeric
+	  		type    : hidden
+	  		list    : true
+	  		default : 0
+	  		length  : 1
+
+	  	title :
+	  		column      : true
+	  		link        : edit
+	  		description : Заголовок
+	  		type        : text
+	  		admin       : true
+	  		list        : true
+	  		rules       : required
+
+	  	lang :
+	  		column      : true
+	  		type        : hidden
+	  		default     : ru
+
+	  	uri :
+	  		column      : true
+	  		description : ЧПУ
+	  		type        : text
+	  		admin       : true
+	  		list        : true
+
+	  	content :
+	  		description : Содержание
+	  		type        : textarea_full
+	  		list        : true
+
+	  	child_count :
+	  		column       : true
+	  		kind         : numeric
+	  		description  : Child no.
+	  		type         : hidden
+	  		list         : true
+	  		admin        : true
+	  		default      : 0
+	  		length       : 5
+
+	- name   : Настройки страницы
+	  icon   : wrench
+	  fields :
+
+	  	separator_design :
+	  		description : Настройки дизайна
+	  		type        : separator
+
+	  	view_template : 
+	  		description : Шаблон
+	  		type        : select
+	  		onchange    : fastcms.actions.template_act() # Javascript
+	  		rules       : required
+	  		admin       : true
+	  		list        : true
+	  		default     : default
+	  		options     :
+	  			default  : По умолчанию
+	  			homepage : Главная
+	  			realestate : Каталог недвижимости
+	  			orderform : Заявка
+	  			buyform : Срочный выкуп
+	  			addform : Добавление объявления
+	  			map : Карта
+	  			testmonials : Отзывы клиентов
+	  			feedback : Контакты
+	  			signin : Форма входа
+				
+
+	  	realestate_currency_selector :
+	  		description : Основная валюта раздела
+	  		visible     : false
+	  		type        : select
+	  		options     :
+	  			usd    : Доллары
+	  			uah    : Гривны
+	  			euro    : Евро
+
+
+
+
+# for orderform template
+
+	  	template_orderform_email :
+	  		description : E-mail получателя
+	  		visible     : false
+	  		type        : text
+				
+# for map template
+
+	  	template_map_content :
+	  		description : Показывать на карте
+	  		visible     : false
+	  		onchange    : fastcms.actions.mapfields_act() # Javascript
+	  		type        : select
+	  		options     :
+	  			listmapdata    : Добавленные записи
+	  			showfixedlocation    : Конкретный адрес
+
+	  	template_map_center :
+	  		description : Центр карты (адрес)
+	  		visible     : false
+	  		type        : text
+	  	template_map_marker :
+	  		description : Показывать маркер
+	  		visible     : false
+	  		type        : select
+	  		options     :
+	  			Y    : Да
+	  			N    : Нет
+	  	template_map_filter :
+	  		description : Показывать фильтр категорий
+	  		visible     : false
+	  		type        : select
+	  		options     :
+	  			Y    : Да
+	  			N    : Нет
+
+
+				
+# for feedback template
+
+	  	template_feedback_email :
+	  		description : E-mail
+	  		visible     : false
+	  		type        : text
+
+	  	template_feedback_adress :
+	  		description : Адрес
+	  		visible     : false
+	  		type        : text
+	  	template_feedback_city :
+	  		description : Город
+	  		visible     : false
+	  		type        : text
+	  	template_feedback_region :
+	  		description : Область
+	  		visible     : false
+	  		type        : text
+	  	template_feedback_postcode :
+	  		description : Индекс
+	  		visible     : false
+	  		type        : text
+	  	template_feedback_country :
+	  		description : Страна
+	  		visible     : false
+	  		type        : text
+	  	template_feedback_mobile :
+	  		description : Мобильный (через запятую)
+	  		visible     : false
+	  		type        : text
+	  	template_feedback_fixed :
+	  		description : Городской
+	  		visible     : false
+	  		type        : text
+	  	template_feedback_fax :
+	  		description : Факс
+	  		visible     : false
+	  		type        : text
+	  	template_feedback_website :
+	  		description : Сайт
+	  		visible     : false
+	  		type        : text
+	  		default        : eval:site_url()
+	  	template_feedback_content :
+	  		description : Дополнительная информация
+	  		type        : textarea_full
+	  		visible     : false
+
+
+	  	separator_action :
+	  		description : Дополнительное содержание
+	  		type        : separator
+
+	  	action :
+	  		description : Показывать на странице
+	  		type        : select
+	  		onchange    : fastcms.actions.record_act() # Javascript
+	  		options     :
+	  			text    : Просто текст
+	  			list    : Записи
+
+	  	action_list_type :
+	  		description : Тип записей
+	  		visible     : false
+	  		type        : select
+	  		sql         :
+	  			cache    : true
+	  			select   : "id_type AS value, title"
+	  			from     : types
+	  			order_by : title ASC
+
+	  	action_list_categories :
+	  		description : "Категории (A, B, C)"
+	  		visible     : false
+	  		type        : text
+
+	  	action_list_limit :
+	  		description : Результатов на странице
+	  		visible     : false
+	  		type        : number
+
+	  	action_list_order_by :
+	  		description : Сортировка
+	  		visible     : false
+	  		type        : select
+	  		options     :
+	  			"id_record DESC"    : "По ID (вниз)"
+	  			"id_record ASC"     : "По ID (вверх)"
+	  			"date_publish DESC" : "Дата публикации (вниз)"
+	  			"date_publish ASC"  : "Дата публикации (вверх)"
+	  			"type DESC" : "Текстовые отзывы сверху"
+	  			"type ASC"  : "Текстовые отзывы снизу"
+
+	  	action_list_has_feed :
+	  		description : RSS/JSON
+	  		visible     : false
+	  		type        : select
+	  		options     :
+	  			T : Да
+	  			F : Нет
+
+	- name   : Настройки навигации
+	  icon   : sitemap
+	  fields :
+
+	  	separator_navigation :
+	  		description : Отображение в меню
+	  		type        : separator
+
+	  	priority :
+	  		column      : true
+	  		kind        : numeric
+	  		description : Приоритет
+	  		type        : number
+	  		admin       : true
+	  		default     : 0
+	  		length      : 3
+
+	  	show_in_menu :
+	  		column : true
+	  		description : Главное меню (продажа)
+	  		type        : radio
+	  		rules       : required
+	  		list        : true
+	  		default     : T
+	  		length      : 1
+	  		options     :
+	  		    T : Показывать
+	  		    S : Только в карте сайта
+	  		    F : Скрыть
+
+	  	show_in_menu_rent :
+	  		column : true
+	  		description : Главное меню (аренда)
+	  		type        : radio
+	  		rules       : required
+	  		list        : true
+	  		default     : T
+	  		length      : 1
+	  		options     :
+	  		    T : Показывать
+	  		    S : Только в карте сайта
+	  		    F : Скрыть
+
+	  	dropdown_menu :
+	  		description : Выпадающее меню (продажа)
+	  		type        : radio
+	  		rules       : required
+	  		list        : true
+	  		default     : F
+	  		length      : 1
+	  		options     :
+	  		    T : Показывать
+	  		    F : Скрыть
+
+	  	dropdown_menu_rent :
+	  		description : Выпадающее меню (аренда)
+	  		type        : radio
+	  		rules       : required
+	  		list        : true
+	  		default     : F
+	  		length      : 1
+	  		options     :
+	  		    T : Показывать
+	  		    F : Скрыть
+
+	  	header_menu :
+	  		description : Верхнее меню
+	  		type        : radio
+	  		rules       : required
+	  		list        : true
+	  		default     : F
+	  		length      : 1
+	  		options     :
+	  		    T : Показывать
+	  		    F : Скрыть
+
+	  	footer_menu :
+	  		description : Нижнее меню
+	  		type        : radio
+	  		rules       : required
+	  		list        : true
+	  		default     : F
+	  		length      : 1
+	  		options     :
+	  		    T : Показывать
+	  		    F : Скрыть
+
+	  	separator_cache :
+	  		description : Настройки кеширования
+	  		type        : separator
+
+	  	page_cache :
+	  		description : Кешировать (в минутах, 0 - вечно)
+	  		type        : number
+	  		default     : 0
+
+
+	- name   : SEO
+	  icon   : tags
+	  fields :
+
+	  	meta_h1 :
+	  		description : HTML-тег "H1"
+	  		type        : text
+	  	meta_title :
+	  		description : HTML-тег "Title"
+	  		type        : text
+	  	meta_keywords :
+	  		description : Мета-тег "Keywords"
+	  		type        : text
+	  	meta_description :
+	  		description : Мета-тег "Описание"
+	  		type        : textarea_code
+
