@@ -113,8 +113,10 @@ function leftmenu(&$tree, $max_depth=99, $level=1, $show_in_menu='T', &$str='', 
 			if ($page['show_in_menu'] == $show_in_menu) {
 				if (trim($page['link'], '/') == 'stroitelstvo-i-dizajn') {
 					$str .= '</ul><div class="binder-fx-6"></div><div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div></div>';
-                    $str .= '<div class="sidebar-menu"><div class="title_mm">перейти в раздел:</div><a href="/rent" class="title-dark">Аренда</a><div class="prug"></div><div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>';
+                    //$str .= '<div class="sidebar-menu"><div class="title_mm">перейти в раздел:</div><a href="/rent" class="title-dark">Аренда</a><div class="prug"></div><div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>';
+					$str .= '<div class="sidebar-menu" style="display:none;"><div class="prug"></div><div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>';
 
+					
                     if (false) {
                     $str .= '<div class="sidebar-menu hovered">';
 
